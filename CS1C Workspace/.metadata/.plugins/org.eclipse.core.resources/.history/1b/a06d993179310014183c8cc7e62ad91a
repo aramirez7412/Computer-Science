@@ -1,0 +1,34 @@
+/*******************************************************************************
+ * NAME     : Anthony Ramirez
+ * CLASS    : CS1C
+ * SECTION  : T/TH 6:00-8:50
+ * DATE     : /14
+ * ASSIGN #2: Deck Of Cards
+ *******************************************************************************/
+#include "Header.h"
+#include "DeckClass.h"
+
+/******************************************************************************
+ * Deck Of Cards
+ * ----------------------------------------------------------------------------
+ * This program
+ * ------------------------------------------------------------------------------
+ * INPUT:
+ *
+ * OUTPUT:
+ *******************************************************************************/
+
+int main()
+{
+	//D E C L A R A T I O N S
+	Deck newDeck;
+	newDeck.InitializeDeck();
+
+	OutputHeader(cout, "Anthony Ramirez", "CS1C",
+				 "6:00-8:50 PM", 2, "Deck Of Cards", 'A');
+	newDeck.PrintFinalDeck();
+	newDeck.SuffleFinalDeckOnce();
+
+
+	return 0;
+}

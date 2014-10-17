@@ -1,0 +1,51 @@
+/*******************************************************************************
+ * NAME     : Anthony Ramirez
+ * CLASS    : CS1C
+ * SECTION  : T/TH 6:00-8:50
+ * DATE     : /14
+ * ASSIGN #2: Deck Of Cards
+ *******************************************************************************/
+#include "Header.h"
+#include "DeckClass.h"
+
+/******************************************************************************
+ * Deck Of Cards
+ * ----------------------------------------------------------------------------
+ * This program will shuffle cards
+ * ------------------------------------------------------------------------------
+ * INPUT:
+ *
+ * OUTPUT:
+ *******************************************************************************/
+
+int main()
+{
+	//D E C L A R A T I O N S
+	Deck newDeck;
+	int  count;
+
+	OutputHeader(cout, "Anthony Ramirez", "CS1C",
+				 "6:00-8:50 PM", 2, "Deck Of Cards", 'A');
+	cout << "Initial Deck of Cards   " << endl;
+	cout << "---------------------   " << endl;
+	newDeck.PrintDeck();
+
+	cout << endl << endl;
+
+	cout << "Perfectly Shuffled Deck " << endl;
+	cout << "----------------------- " << endl;
+	newDeck.PerfectShuffle();
+	newDeck.PrintShuffledDeck();
+
+	cout << endl << endl;
+	count = newDeck.ShuffleFinalUntilPerfect();
+
+	newDeck.PrintFinalDeck();
+
+
+
+
+
+
+	return 0;
+}

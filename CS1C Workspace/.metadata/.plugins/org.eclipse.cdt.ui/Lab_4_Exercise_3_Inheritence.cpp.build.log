@@ -1,0 +1,17 @@
+00:53:25 **** Rebuild of configuration Debug for project Lab_4_Exercise_3_Inheritence.cpp ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o ModifyRadius.o "..\\ModifyRadius.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o PromptUserForIntInput.o "..\\PromptUserForIntInput.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o CylinderImplementation.o "..\\CylinderImplementation.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o ModifyHeight.o "..\\ModifyHeight.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Menus.o "..\\Menus.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o CircleImplentation.o "..\\CircleImplentation.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o OutputHeader.o "..\\OutputHeader.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o CylinderOperations.o "..\\CylinderOperations.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o CircleOperations.o "..\\CircleOperations.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o PromptUserForDoubleInput.o "..\\PromptUserForDoubleInput.cpp" 
+g++ -o Lab_4_Exercise_3_Inheritence.cpp.exe main.o PromptUserForIntInput.o PromptUserForDoubleInput.o OutputHeader.o ModifyRadius.o ModifyHeight.o Menus.o CylinderOperations.o CylinderImplementation.o CircleOperations.o CircleImplentation.o 
+
+00:53:30 Build Finished (took 4s.246ms)
+

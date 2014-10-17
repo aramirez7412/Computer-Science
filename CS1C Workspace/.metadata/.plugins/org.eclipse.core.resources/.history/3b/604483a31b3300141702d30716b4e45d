@@ -1,0 +1,12 @@
+
+#ifndef CYLINDERCLASS_H_
+#define CYLINDERCLASS_H_
+
+
+class Cylinder : public CircleType
+{
+
+};
+
+
+#endif /* CYLINDERCLASS_H_ */

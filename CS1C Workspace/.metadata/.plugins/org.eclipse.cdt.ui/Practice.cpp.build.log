@@ -1,0 +1,9 @@
+20:50:24 **** Incremental Build of configuration Debug for project Practice.cpp ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+..\main.cpp: In function `int main()':
+..\main.cpp:39: error: `Function' undeclared (first use this function)
+..\main.cpp:39: error: (Each undeclared identifier is reported only once for each function it appears in.)
+
+20:50:25 Build Finished (took 468ms)
+

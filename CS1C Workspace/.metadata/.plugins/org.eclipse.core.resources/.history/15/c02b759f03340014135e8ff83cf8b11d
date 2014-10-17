@@ -1,0 +1,43 @@
+/*******************************************************************************
+ * NAME   : Anthony Ramirez
+ * CLASS  : CS1C
+ * SECTION: T/TH 6:00-8:50
+ * DATE   : 9/4/14
+ * LAB #3 : Shapes and Inheritance
+ *******************************************************************************/
+
+#include "Header.h"
+#include "CircleType.h"
+#include "CylinderType.h"
+
+/******************************************************************************
+ * Shapes and Inheritance
+ * ----------------------------------------------------------------------------
+ * This program
+ * ------------------------------------------------------------------------------
+ * INPUT:
+ *
+ * OUTPUT:
+ *******************************************************************************/
+
+int main()
+{
+	//D E C L A R A T I O N S
+
+	CylinderType cylinder;
+
+	/***************************************************************************
+	 * FUNCTION OutputHeader
+	 * -------------------------------------------------------------------------
+	 * This function will output the header
+	 ***************************************************************************/
+	OutputHeader(cout, "Anthony Ramirez", "CS1C",
+				 "6:00-8:50 PM", 2, "C-string concatenation", 'L');
+
+	PromptUserForIntInput("Please enter initial radius to continue operations: ",
+						  0, 20,000, "***Please enter a NUMBER***", )
+
+
+
+	return 0;
+}

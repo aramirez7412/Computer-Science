@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Assignment_4_Pointers.cpp/PoliticianClass.h&apos; to &apos;CandidateClass.h&apos;" description="Rename resource &apos;PoliticianClass.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="PoliticianClass.h" name="CandidateClass.h" stamp="1410492667730" updateReferences="true"/>
+</session>

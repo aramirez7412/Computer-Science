@@ -1,0 +1,41 @@
+/*******************************************************************************
+ * NAME   : Anthony Ramirez
+ * CLASS  : CS1C
+ * SECTION: T/TH 6:00-8:50
+ * DATE   : 9/4/14
+ * LAB #3 : Shapes and Inheritance
+ *******************************************************************************/
+
+#include "Header.h"
+#include "CylinderType.h"
+#include "CircleType.h"
+
+void MainMenu(CylinderType cyl)
+{
+	cout << "Current Radius " << cyl.GetRadius() << endl;
+	cout << "1 - Circle Operations"   << endl;
+	cout << "2 - Cylinder Operations" << endl;
+	cout << "3 - Change Radius"		  << endl;
+	cout << "0 - Exit Program"		  << endl;
+}
+
+void CircleMenu(CylinderType cyl)
+{	cout << "Current Radius " << cyl.GetRadius() << endl;
+	cout << "1 - Calculate Area"            << endl;
+	cout << "2 - Calculate Circumference"   << endl;
+	cout << "3 - Print All"					<< endl;
+	cout << "4 - Enter new radius" 		    << endl;
+	cout << "5 - Go to Cylinder Operations" << endl;
+	cout << "0 - Exit To Main Menu"         << endl;
+}
+
+void CylinderMenu(CylinderType cyl)
+{
+	cout << "Current Radius " << cyl.GetRadius() << endl;
+	cout << "1 - Calculate Surface Area"  << endl;
+	cout << "2 - Calculate Volume"		  << endl;
+	cout << "3 - Print All"			      << endl;
+	cout << "4 - Enter new radius"		  << endl;
+	cout << "5 - Go to Circle Operations" << endl;
+	cout << "0 - Exit To Main Menu"		  << endl;
+}

@@ -1,0 +1,44 @@
+/*******************************************************************************
+ * NAME     : Anthony Ramirez
+ * CLASS    : CS1C
+ * SECTION  : T/TH 6:00-8:50
+ * DATE     : /14
+ * ASSIGN #2: Deck Of Cards
+ *******************************************************************************/
+#ifndef DECKCLASS_H_
+#define DECKCLASS_H_
+
+#include "CardClass.h"
+#include <string>
+#include <iostream>
+using namespace std;
+
+const int SIZE = 52;
+class Deck
+{
+	public:
+	Deck();
+	~Deck();
+	void PerfectShuffle();
+	void PrintDeck();
+	void PrintShuffledDeck();
+	void ShuffleDeck();
+	void InitializeDeck();
+	void PrintFinalDeck();
+	void InitializeAll();
+	void ShuffleFinalDeckOnce();
+	int ShuffleFinalUntilPerfect();
+
+	//O P E R A T O R ~ O V E R L O A D
+
+
+	private:
+
+	Card deck[52];
+	Card perfectShuffle[52];
+	Card finalDeck[52];
+};
+
+
+
+#endif /* DECKCLASS_H_ */

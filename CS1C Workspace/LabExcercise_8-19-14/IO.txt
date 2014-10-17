@@ -1,0 +1,51 @@
+/*******************************************************************************
+ * Name     : Anthony Ramirez
+ * Lab      : Exercise
+ * Class    : CS1C
+ * Section  : T/TH 6-9
+ * Due Date : 8/19/14
+ *******************************************************************************/
+Please enter 3 digits for vector one
+(each digit followed by a space "_"):1 2 3
+Please enter 3 digits for vector two
+(each digit followed by a space "_"):3 2 1
+
+
+Sum of two vectors
+Vector 1
+(1, 2, 3)
+Vector 2
+(3, 2, 1)
+Sum of Vectors
+(4, 4, 4)
+
+The dot product of the two vectors is 10
+
+Please enter 9 digits for vector one
+(each digit followed by a space " "):1 2 3 4 5 6 7 8 9
+Please enter 9 digits for vector two
+(each digit followed by a space " "):9 8 7 6 5 4 3 2 1
+
+                   Sum Matrix
+                   ----------
+                   The sum of
+                   1    2    3
+                   4    5    6
+                   7    8    9
+
+                       and 
+                   9    8    7
+                   6    5    4
+                   3    2    1
+
+                        is 
+                  10   10   10
+                  10   10   10
+                  10   10   10
+
+Please enter a date ("mm/dd/yyyy"): 008/21/2014
+
+****Invalid date, enter the date in an acceptable format****
+Please enter a date ("mm/dd/yyyy"): 08/21/2014
+
+The date is August, 21 2014

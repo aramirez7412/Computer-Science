@@ -1,0 +1,9 @@
+00:53:20 **** Rebuild of configuration Debug for project Lab 3_Exercise-2.cpp ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o OutputHeader.o "..\\OutputHeader.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o MyStrCat.o "..\\MyStrCat.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o "Lab 3_Exercise-2.cpp.exe" main.o OutputHeader.o MyStrCat.o 
+
+00:53:21 Build Finished (took 1s.134ms)
+

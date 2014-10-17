@@ -1,0 +1,90 @@
+/*******************************************************************************
+ * NAME   : Anthony Ramirez
+ * CLASS  : CS1C
+ * SECTION: T/TH 6:00-8:50
+ * DATE   : 9/4/14
+ * LAB #3 : Shapes and Inheritance
+ *******************************************************************************/
+
+#include "Header.h"
+#include "CircleType.h"
+#include "CylinderType.h"
+
+/******************************************************************************
+ * Shapes and Inheritance
+ * ----------------------------------------------------------------------------
+ * This program
+ * ------------------------------------------------------------------------------
+ * INPUT:
+ *
+ * OUTPUT:
+ *******************************************************************************/
+
+int main()
+{
+	//D E C L A R A T I O N S
+
+	CylinderType cylinder;	//CALC & OUT - used to perform operations in program
+	int mainChoice;			//IN & CALC - used to store user menu choice
+
+	/***************************************************************************
+	 * FUNCTION OutputHeader
+	 * -------------------------------------------------------------------------
+	 * This function will output the header
+	 ***************************************************************************/
+	OutputHeader(cout, "Anthony Ramirez", "CS1C",
+				 "6:00-8:50 PM", 2, "C-string concatenation", 'L');
+
+
+	//Prompts the user to enter an initial radius
+	ModifyRadius(cylinder);
+
+	//Outputs the Main menu
+	MainMenu(cylinder);
+	//Error checks the users input for the menu option
+	mainChoice = PromptUserForIntInput("Please enter a menu option: ", 0, 4,
+					 "***Please enter a NUMBER***",
+					 "***Please enter a number between 0 and 4");
+
+	//Begin While
+	while(mainChoice != 0)
+	{
+		//Begin Switch
+		switch(mainChoice)
+
+		{
+			case 0: //EXIT
+			break;
+			case 1: //Calls upon the circle operations function
+					CircleOperations(cylinder);
+			break;
+			case 2: //Calls upon the cylinder operations function
+					CylinderOperations(cylinder);
+			break;
+			case 3: cout << endl;
+					//Modifies the CylinderType objects radius
+					ModifyRadius(cylinder);
+			break;
+			default: ;
+
+		}
+
+		//Outputs the main menu if the user does not exit the program
+		if(mainChoice <= 0)
+		{
+			//Outputs menu
+			MainMenu(cylinder);
+
+			//User enters another menu choice
+			mainChoice = PromptUserForIntInput
+					    ("Please enter a menu option: ", 0, 4,
+						 "***Please enter a NUMBER***",
+						 "***Please enter a number between 0 and 4");
+		}
+	}
+
+
+
+
+	return 0;
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Assign2_Deck_OfCards.cpp/DeckOfCardsClass.cpp&apos; to &apos;DeckOfCardsClass.h&apos;" description="Rename resource &apos;DeckOfCardsClass.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="DeckOfCardsClass.cpp" name="DeckOfCardsClass.h" stamp="1409240138149" updateReferences="true"/>
+</session>

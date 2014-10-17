@@ -1,0 +1,71 @@
+/*******************************************************************************
+ * NAME   : Anthony Ramirez
+ * CLASS  : CS1C
+ * SECTION: T/TH 6:00-8:50
+ * DATE   : 9/4/14
+ * LAB #3 : Shapes and Inheritance
+ *******************************************************************************/
+
+#include "Header.h"
+
+/*******************************************************************************
+ * CircleOperations
+ * -----------------------------------------------------------------------------
+ * This function takes the user into a menu specific to perform operations with
+ * a circle
+ * -----------------------------------------------------------------------------
+ * POST-CODNDITIONS
+ *
+ * CylinderType Class must be previously defined
+ * CircleMenu() must be previously defined
+ *
+ * cyl: Used to for output and must be previously defined
+ *
+ * RETURNS none
+ *******************************************************************************/
+void CircleOperations(CylinderType & cyl)//IN & OUT & CALC
+{
+	//D E C L A R A T I O N S
+	int menuChoice; //IN - User input
+
+	//Outputs the Circle menu
+	CircleMenu(cyl);
+	menuChoice = PromptUserForIntInput( "***Please enter a NUMBER***",
+								 	 	"***Please enter a number between 0 and 5",
+								 	 	"Please enter a menu option: ",
+								 	 	0, 5);
+
+
+	while(menuChoice != 0)
+	{
+		switch(menuChoice)
+		{
+		case 0:
+			break;
+		case 1: cout << "\nThe area is " << cyl.Area() << endl;
+			break;
+		case 2: cout <<  "\nThe circumference is " << cyl.Circumference()
+				     << endl;
+			break;
+		case 3: cout << endl; cyl.PrintAll();
+			break;
+		case 4: ModifyRadius(cyl);
+			break;
+		case 5: CylinderOperations(cyl);
+			break;
+		}
+
+		if(menuChoice != 0)
+		{
+			CircleMenu(cyl);
+			menuChoice = PromptUserForIntInput(
+									 "***Please enter a NUMBER***",
+									 "***Please enter a number between 0 and 5",
+									 "Please enter a menu option: ", 0, 5);
+
+		}
+
+	}
+
+}
+

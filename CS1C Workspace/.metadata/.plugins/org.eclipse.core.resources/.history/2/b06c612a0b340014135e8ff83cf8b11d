@@ -1,0 +1,93 @@
+/*******************************************************************************
+ * NAME   : Anthony Ramirez
+ * CLASS  : CS1C
+ * SECTION: T/TH 6:00-8:50
+ * DATE   : 9/4/14
+ * LAB #3 : Shapes and Inheritance
+ *******************************************************************************/
+#include "Header.h"
+
+/*******************************************************************************
+ * PromptUserForInput
+ * -----------------------------------------------------------------------------
+ * This function will error check user input. In this specific function, it
+ * will utilize doubles to check.
+ * ----------------------------------------------------------------------------
+ * PRE-CONDITIONS
+ *
+ * 	prompt		 : Used for output and must be previously defined
+ * 	min   		 : Used to set range and must be previously defined
+ * 	max   		 : Used to set range and must be previously defined
+ * 	errorMessage :   Used for output to notify user of an error and must be
+ * 				    previously defined
+ * 	errorMessage2:  Used for output to notify user of an error and must be
+ * 				    previously defined
+ *
+ * 	POST-CONDITIONS
+ *
+ * 	Returns an error checked double
+ *******************************************************************************/
+double PromptUserForDoubleInput(string prompt,	   //IN & OUT - used for output
+					      double min,          //CALC - lower bound
+					      double max,		   //CALC - upper bound
+					      string errorMessage, //OUT - used for out
+					      string errorMessage2)//OUT - used for out
+{
+	//D E C L A R A T I O N
+	double        userInput;	 //INPUT - input from user
+	ostringstream out;	  		 //OUT - used for output
+	string        errorMessage3; //OUT - used to notify user of an error
+	int           width;		 //OUT - sets width of the output
+	bool          proceed;       //CALC - used in do while loop
+
+	do
+	{
+		//I N I T I A L I Z A T I O N
+		proceed = true;
+
+		//Prompts user
+		cout << prompt;
+
+		//Will enter if statement if input is not a number
+		if(!(cin >> userInput))
+		{
+			//Clears error state in input buffer
+			cin.clear();
+
+			//Outputs error message
+			cout << endl << errorMessage << endl;
+		}
+		//Enters else-if if the input is outside of range
+		else if(userInput < min && userInput > max)
+		{
+			//Will determine size of output size to format error message
+			out << "***" << userInput << " is not valid input***";
+			errorMessage3 = out.str();
+
+			//Clears string stream
+			out.str("");
+
+			//Checks lengths of both error messages to decide greater length
+			if(errorMessage3.length() > errorMessage2.length())
+			{
+				//Assigns width to length
+				width = errorMessage3.length();
+			}
+			else
+			{
+				//Assigns width to length
+				width = errorMessage2.length();
+			}
+
+			//outputs error messages to the user
+			cout << setw(width) << errorMessage3 << "****" << endl;
+			cout << setw(width) << errorMessage2 << "****" << endl;
+		}
+		else
+		{
+			proceed = false;
+		}
+	}while(proceed);
+
+	return userInput;
+}

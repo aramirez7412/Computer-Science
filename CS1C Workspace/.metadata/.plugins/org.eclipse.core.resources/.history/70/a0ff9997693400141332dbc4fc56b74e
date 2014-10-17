@@ -1,0 +1,76 @@
+/*******************************************************************************
+ * NAME   : Anthony Ramirez
+ * CLASS  : CS1C
+ * SECTION: T/TH 6:00-8:50
+ * DATE   : 9/4/14
+ * LAB #3 : Shapes and Inheritance
+ *******************************************************************************/
+
+#include "Header.h"
+
+/*******************************************************************************
+ * CylinderOperations
+ * -----------------------------------------------------------------------------
+ * This function takes the user into a menu specific to perform operations with
+ * a circle
+ * -----------------------------------------------------------------------------
+ * POST-CODNDITIONS
+ *
+ * CylinderType Class must be previously defined
+ * CircleMenu() must be previously defined
+ *
+ * cyl: Used to for output and must be previously defined
+ *
+ * RETURNS none
+ *******************************************************************************/
+void CylinderOperations(CylinderType & cyl)//IN & OUT & CALC
+{
+	//D E C L A R A T I O N S
+	int menuChoice;	//IN - used to choose switch
+
+	//Desiplays the circle menu
+	CylinderMenu(cyl);
+
+	//prompts the user for integer input
+	menuChoice = PromptUserForIntInput("Please enter a menu option: ",
+			         "***Please enter a NUMBER***",
+			         "***Please enter a number between 0 and 5",0, 5);
+
+	//begin WHile
+	while(menuChoice != 0)
+
+		//Begin switch
+		switch(menuChoice)
+		{
+		case 0:
+			break;
+		case 1: cout << "\nThe surface area is " << cyl.SurfaceArea() << endl;
+			break;
+		case 2: cout <<  "\nThe circumference is " << cyl.Volume()
+				     << endl;
+			break;
+		case 3: cout << endl;
+				cyl.PrintAllCylinder();
+			break;
+		case 4: ModifyRadius(cyl);
+			break;
+		case 5: CylinderOperations(cyl);
+			break;
+		default:;
+		}//End switch
+
+		//Enters as long as the user does not want to exit
+		if(menuChoice != 0)
+		{
+			//Outputs the cylinder menu
+			CylinderMenu(cyl);
+
+			//Prompts the user for a menu choice
+			menuChoice = PromptUserForIntInput(
+						 "***Please enter a NUMBER***",
+						 "***Please enter a number between 0 and 5",
+						 "Please enter a menu option: ",
+						 0,5);
+		}
+	}//End While
+}

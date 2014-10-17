@@ -1,0 +1,179 @@
+/*******************************************************************************
+ * NAME   : Anthony Ramirez
+ * CLASS  : CS1C
+ * SECTION: T/TH 6:00-8:50
+ * DATE   : 9/4/14
+ * LAB #3 : Shapes and Inheritance
+ *******************************************************************************/
+
+#ifndef CIRCLETYPE_H_
+#define CIRCLETYPE_H_
+
+#include <iomanip>
+#include <iostream>
+
+#define pi 3.1416
+class CircleType
+{
+	//P R I V A T E
+	private:
+
+	double radius; //-radius
+
+	//P U B L I C
+	public:
+	//C O N S T R U C T O R
+	/***************************************************************************
+	 * CirclType (Constructor)
+	 * -------------------------------------------------------------------------
+	 * This method will initialize the private member "radius" to 0
+	 *
+	 * POST-CONDITIONS: radius = r; Initialized to 0
+	 ***************************************************************************/
+	CircleType(double r = 0);
+
+
+	//M U T A T O R S
+	/***************************************************************************
+	 * +SetRadius
+	 * -------------------------------------------------------------------------
+	 * This method will set the radius of the circle object
+	 *
+	 * POST-CONDITIONS: if(r>=0 radius = r;
+	 * 					otherwise radius is initialized to 0;
+	 ***************************************************************************/
+	void SetRadius(double r);
+
+	/***************************************************************************
+	 * +Area
+	 * -------------------------------------------------------------------------
+	 * This method will calculate and return the Area with the given radius
+	 *
+	 * POST-CONDITION: a double is returned holding the Area value
+	 ***************************************************************************/
+	double Area() const;
+
+	/***************************************************************************
+	 * +Circumference
+	 * -------------------------------------------------------------------------
+	 * This method will calculate and return the Circumference with the given
+	 * radius.
+	 *
+	 * POST-CONDITION: a double is returned holding the Circumference value
+	 ***************************************************************************/
+	double Circumference() const;
+
+
+	//A C C E S S O R S
+	/***************************************************************************
+	 * +GetRadius
+	 * -------------------------------------------------------------------------
+	 * This method returns the radius
+	 *
+	 * POST-CONDITION returns the radius
+	 ***************************************************************************/
+	double GetRadius() const;
+
+	/***************************************************************************
+	 * +PrintAll
+	 * -------------------------------------------------------------------------
+	 * This method prints the Area, Circumference, and radius
+	 *
+	 * POST-CONDITIONS: The Area, Circumference, and radius will be output
+	 * 					to the console
+	 ***************************************************************************/
+	void PrintAll() const;
+};
+/*******************************************************************************
+ * PrintAll
+ * -----------------------------------------------------------------------------
+ * This method is will Print the radius, circumference, and Area to the console
+ *
+ * POST-CONDITIONS: Prints the radius, circumference, and area to the console
+ *******************************************************************************/
+void CircleType::PrintAll() const
+{
+	/***************************************************************************
+	 * O U T P U T
+	 * -------------------------------------------------------------------------
+	 * Calls upon +GetRadius(), +Circumference(), and +Area() to be printed
+	 ***************************************************************************/
+	cout << setw(15) << "Radius: " 		  << GetRadius()	 << endl;
+	cout << setw(15) << "Circumference: " << Circumference() << endl;
+	cout << setw(15) << "Area: "          << Area()          << endl;
+
+}
+
+/*******************************************************************************
+ * SetRadius
+ * -----------------------------------------------------------------------------
+ * This method is will set the radius in the CircleType object
+ *
+ * POST-CONDITIONS: Sets the radius to the parameter being passed in
+ *******************************************************************************/
+void CircleType::SetRadius(double r)
+{
+	/***************************************************************************
+	 * P R O C E S S I N G
+	 * -------------------------------------------------------------------------
+	 * If the radius passed in is less then zero then the radius will be
+	 * automatically initialized to 0
+	 *
+	 * POST-CONDITIONS: radius is initialized
+	 ***************************************************************************/
+	if (r >=0)
+		radius = r;
+	else
+		radius = 0;
+}
+
+/*******************************************************************************
+ * GetRadius
+ * -----------------------------------------------------------------------------
+ * This method is will return -radius
+ *
+ * POST-CONDITIONS: returns -radius
+ *******************************************************************************/
+double CircleType::GetRadius() const
+{
+	return radius;
+}
+
+/*******************************************************************************
+ * Area
+ * -----------------------------------------------------------------------------
+ * This method is will calculate the Area using the given radius
+ *
+ * POST-CONDITIONS: returns the Area
+ *******************************************************************************/
+double CircleType::Area() const
+{
+	return pi*radius*radius;
+}
+
+/*******************************************************************************
+ * Circumference
+ * -----------------------------------------------------------------------------
+ * This method is will calculate the circumference and return it
+ *
+ * POST-CONDITIONS: Returns circumference
+ *******************************************************************************/
+double CircleType::Circumference() const
+{
+	return 2*pi*radius;
+}
+
+/*******************************************************************************
+ * CircleType (Constructor)
+ * -----------------------------------------------------------------------------
+ * This constructor will initialize -radius to 0
+ *
+ * POST-CONDITIONS: -radius is initialized to 0
+ *******************************************************************************/
+CircleType::CircleType(double r)
+{
+	SetRadius(r);
+}
+
+
+#endif /* CIRCLETYPE_H_ */

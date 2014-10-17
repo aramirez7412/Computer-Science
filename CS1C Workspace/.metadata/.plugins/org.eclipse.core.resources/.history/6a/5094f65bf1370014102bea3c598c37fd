@@ -1,0 +1,30 @@
+/*******************************************************************************
+ * NAME     : Anthony Ramirez
+ * CLASS    : CS1C
+ * SECTION  : T/TH 6:00-8:50
+ * DATE     : 9/9/14
+ * ASSIGN #3: Student Class
+ *******************************************************************************/
+#include "Header.h"
+#include "StudentClass.h"
+
+void PropagateStudentArray(const int SIZE, Student stuAr[])
+{
+
+	string name;
+	long   id;
+
+	cout << "Enter the proper information to continue.";
+
+	for(int index = 0; index < SIZE; index++)
+	{
+		cout << "Enter Name: " ;
+		getline(cin, name);
+		stuAr[index].SetName(name);
+
+		cout << endl << "Enter ID: ";
+		cin  >> id;
+		stuAr[index].SetId(id);
+		cin.ignore(numeric_limits<streamsize>::max(), '\n');
+	}
+}

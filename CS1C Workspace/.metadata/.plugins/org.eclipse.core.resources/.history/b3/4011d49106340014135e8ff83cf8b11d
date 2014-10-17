@@ -1,0 +1,67 @@
+/*******************************************************************************
+ * NAME   : Anthony Ramirez
+ * CLASS  : CS1C
+ * SECTION: T/TH 6:00-8:50
+ * DATE   : 9/4/14
+ * LAB #3 : Shapes and Inheritance
+ *******************************************************************************/
+#include "Header.h"
+
+int PromptUserForInput(string prompt,
+						  double min,
+						  double max,
+						  string errorMessage,
+						  string errorMessage2)
+{
+	//D E C L A R A T I O N
+	double userInput;	  //INPUT - input from user
+	ostringstream out;	  //OUT - used for output
+	string errorMessage3; //OUT - used to notify user of an error
+	int width;			  //OUT - sets width of the output
+	bool proceed;         //CALC - used in do while loop
+
+	do
+	{
+		//I N I T I A L I Z A T I O N
+		proceed = true;
+
+		//Prompts user
+		cout << prompt;
+
+		//Will enter if statement if input is not a number
+		if(!(cin >> userInput))
+		{
+			//Clears error state in input buffer
+			cin.clear();
+
+			//Outputs error message
+			cout << endl << errorMessage << endl;
+		}
+		//Enters else-if if the input is
+		else if(userInput < min && userInput > max)
+		{
+			out << "***" << userInput << " is not valid input***";
+			errorMessage3 = out.str();
+
+			out.str("");
+
+			if(errorMessage3.length() > errorMessage2.length())
+			{
+				width = errorMessage3.length();
+			}
+			else
+			{
+				width = errorMessage2.length();
+			}
+
+			cout << setw(width) << errorMessage3 << "****" << endl;
+			cout << setw(width) << errorMessage2 << "****" << endl;
+		}
+		else
+		{
+			proceed = false;
+		}
+	}while(proceed);
+
+	return userInput;
+}

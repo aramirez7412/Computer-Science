@@ -1,0 +1,58 @@
+/*******************************************************************************
+ * NAME     : Anthony Ramirez
+ * CLASS    : CS1C
+ * SECTION  : T/TH 6:00-8:50
+ * DATE     : 9/9/14
+ * ASSIGN #3: Student Class
+ *******************************************************************************/
+#include "Date.h"
+
+/***************************************************************************
+ * Date Constructor
+ * -------------------------------------------------------------------------
+ * This is the default constructor for the date class and will initialize
+ * private members to zero
+ *
+ * Returns: All private members initialized to zero
+ ***************************************************************************/
+Date::Date():month(0),day(0),year(0), date(" ")
+{
+}
+
+/***************************************************************************
+ * Date Constructor (non-default)
+ * -------------------------------------------------------------------------
+ * This is the non-default constructor for the date class and will
+ * initialize private members to the parameters being passed in
+ *
+ * Returns: All private members initialized to respective parameter
+ ***************************************************************************/
+Date::Date(int    newMonth,
+		   int    newDay,
+		   int    newYear,
+		   string newDate)
+{
+	SetMonth(newMonth);
+	SetDay(newDay);
+	SetYear(newYear);
+	SetDate(newDate);
+}
+
+
+/***************************************************************************
+ * SetMonth
+ * -------------------------------------------------------------------------
+ * This method will set -month by assigning the value of newName
+ *
+ * Returns: All private members initialized to respective parameter
+ ***************************************************************************/
+void Date::SetMonth	(int newMonth)
+{
+	month = newMonth;
+}
+
+
+
+
+
+

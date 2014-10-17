@@ -1,0 +1,16 @@
+00:53:21 **** Rebuild of configuration Debug for project LabExcercise_8-19-14 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DateStringConversion.o "..\\DateStringConversion.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Dot.o "..\\Dot.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o Add.o "..\\Add.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o OutputVectors.o "..\\OutputVectors.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o ThreeByThreeMatrix.o "..\\ThreeByThreeMatrix.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o FillMatrix.o "..\\FillMatrix.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o ErrorCheck.o "..\\ErrorCheck.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o FillVector.o "..\\FillVector.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o OutputMatrix.o "..\\OutputMatrix.cpp" 
+g++ -o LabExcercise_8-19-14.exe main.o ThreeByThreeMatrix.o OutputVectors.o OutputMatrix.o FillVector.o FillMatrix.o ErrorCheck.o Dot.o DateStringConversion.o Add.o 
+
+00:53:25 Build Finished (took 3s.887ms)
+

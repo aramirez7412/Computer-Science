@@ -1,0 +1,151 @@
+/*******************************************************************************
+ * NAME   : Anthony Ramirez
+ * CLASS  : CS1C
+ * SECTION: T/TH 6:00-8:50
+ * DATE   : 9/4/14
+ * LAB #3 : Shapes and Inheritance
+ *******************************************************************************/
+#ifndef CYLINDERCLASS_H_
+#define CYLINDERCLASS_H_
+#include "CircleType.h"
+
+//D E F I N E
+#define pi 3.1416 //Defined pi
+
+class CylinderType : public CircleType
+{
+
+	//P R I V A T E
+	private:
+		double height; //-height
+
+	public:
+		/***********************************************************************
+		 * CylinderType (Constructor)
+		 * ---------------------------------------------------------------------
+		 * This constructor will initialize height and radius to zero
+		 *
+		 * POST-CONDITIONS
+		 ***********************************************************************/
+		CylinderType();
+
+		/***********************************************************************
+		 * ~CylinderType (Destructor)
+		 * ---------------------------------------------------------------------
+		 * This destructor destructs an instance of CylinderType
+		 ***********************************************************************/
+		~CylinderType();
+
+
+		//M U T A T O R S
+
+		/***********************************************************************
+		 * SetHeight
+		 * ---------------------------------------------------------------------
+		 * This method will set the -height. -height will be assigned the value
+		 * of newHeight.
+		 *
+		 * POST-CONDITIONS
+		 * -height = newHeight;
+		 ***********************************************************************/
+		void SetHeight        (double newHeight);
+
+		/***********************************************************************
+		 * SetCylinderRadius
+		 * ---------------------------------------------------------------------
+		 * This method will call the CircleType method called SetRadius. The
+		 * -radius will take the value of newRadius. Radius is a member of the
+		 * super class CircleType.
+		 *
+		 * POST-CONDITIONS
+		 * -radius = newRadius;
+		 ***********************************************************************/
+		void SetCylinderRadius(double newRadius);
+
+		//A C C E S S O R S
+
+		/***********************************************************************
+		 * Volume
+		 * ---------------------------------------------------------------------
+		 * This method will calculate and return the volume with the given radius
+		 *
+		 * GetRadius is a public method of the CircleType and must be
+		 * previously defined
+		 *
+		 * CircleType::GetRadius()
+		 * {
+		 *   return radius
+		 * }
+		 *
+		 * POST-CONDITIONS
+		 * pi*GetRadius()*GetRadius()*height;
+		 *
+		 * RETURNS volume (double)
+		 ***********************************************************************/
+		double Volume           () const;
+
+		/***********************************************************************
+		 * SurfaceArea
+		 * ---------------------------------------------------------------------
+		 * This method will calculate and return the surface area with the
+		 * given radius
+		 *
+		 *  GetRadius is a public method of the CircleType and must be
+		 *  previously defined
+		 *
+		 *  CircleType::GetRadius()
+		 *  {
+		 *    return radius
+		 *  }
+		 *
+		 * POST-CONDITIONS
+		 * 2*pi*GetRadius()*GetRadius()) +(2*pi*GetRadius()*height)
+		 *
+		 * RETURNS surfaceArea (double)
+		 ***********************************************************************/
+		double SurfaceArea      () const;
+
+		/***********************************************************************
+		 * GetCylinderRadius
+		 * ---------------------------------------------------------------------
+		 * This method will call upon a method in the super class to retrieve
+		 * the radius
+		 *
+		 *  GetRadius is a public method of the CircleType and must be
+		 *  previously defined
+		 *
+		 *  CircleType::GetRadius()
+		 *  {
+		 * 	 return radius
+		 *  }
+		 *
+		 * POST-CONDITIONS
+		 * radius is returned
+		 *
+		 * RETURNS radius (double)
+		 ***********************************************************************/
+		double GetCylinderRadius() const;
+
+		/***********************************************************************
+		 * PrintAllCylinder
+		 * ---------------------------------------------------------------------
+		 * This method will print the -radius, surface area, and volume of the
+		 * cylinder with the provided radius
+		 * ---------------------------------------------------------------------
+		 *  GetRadius is a public method of the CircleType and must be
+		 *  previously defined
+		 *     CircleType::GetRadius()
+		 *     {
+		 * 	     return radius
+		 *     }
+		 *
+		 * POST-CONDITIONS
+		 * Outputs the radius, surface area, and volume to the console
+		 *
+		 * RETURNS None
+		 ***********************************************************************/
+		void   PrintAllCylinder () const;
+
+};
+#endif /* CYLINDERCLASS_H_ */
+

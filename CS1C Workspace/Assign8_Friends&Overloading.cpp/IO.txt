@@ -1,0 +1,50 @@
+ *******************************************************************************
+ * NAME     : Anthony Ramirez
+ * CLASS    : CS1C
+ * SECTION  : T/TH 6:00-8:50
+ * DATE     : 10/14/14
+ * ASSIGN #8: Friends and Operator Overloading
+ *******************************************************************************
+**Friend Function check!**
+Current ID's
+Student 1: 12344
+Student 2: 12345
+
+ ***************************
+ * The Id's are DIFFERENT!*
+ ***************************
+Changing both the ID's to 1234...
+Current ID's
+Student 1: 1234
+Student 2: 1234
+
+ ***************************
+ * The Id's are the same!*
+ ***************************
+
+**Comparison Operator Check! ==**
+ Current ID's
+ Student 1: 1234
+ Student 2: 12345
+
+ ***************************
+ * The Id's are DIFFERENT!*
+ ***************************
+Changing both the ID's to 54321... Current ID's
+ Student 1: 54321
+ Student 2: 54321
+
+ ***************************
+ * The Id's are the same!*
+ ***************************
+
+**Checking AddToAge Method**
+Adding 5 to age...
+current Age is 19
+5 was added to the age
+New total Age: 24
+
+**Checking Overloaded Plus Sign + **
+CS1C age: 24
+Adding 10...csStudent = csStudent + 10...
+New Age: 34

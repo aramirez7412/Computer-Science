@@ -1,0 +1,62 @@
+/*******************************************************************************
+ * NAME     : Anthony Ramirez
+ * CLASS    : CS1C
+ * SECTION  : T/TH 6:00-8:50
+ * DATE     : 9/9/14
+ * ASSIGN #3: Student Class
+ *******************************************************************************/
+
+#include "Header.h"
+#include "StudentClass.h"
+#include "CS1CStudent.h"
+
+#define go
+/******************************************************************************
+ * Student Class
+ * ----------------------------------------------------------------------------
+ * This program
+ * ------------------------------------------------------------------------------
+ * INPUT:
+ *
+ * OUTPUT:
+ *******************************************************************************/
+
+int main()
+{
+	//D E C L A R A T I O N S
+	Student testStudent;
+	Student testStudent2("Bill Gates",
+						 "Sophomore",
+						 "909-987-6543",
+						 897456,
+						 20,
+						 2.5,
+						 'M');
+	CS1CStudent test;
+
+	/***************************************************************************
+	 * FUNCTION OutputHeader
+	 * -------------------------------------------------------------------------
+	 * This function will output the header
+	 ***************************************************************************/
+	OutputHeader(cout, "Anthony Ramirez", "CS1C",
+				 "6:00-8:50 PM", 3, "Student Class", 'A');
+	#if go
+//
+//	//Testing StudentClass
+//	testStudent.SetAll("Jack Johnson",
+//					   "Freshman",
+//					   "909-123-4567",
+//					   364578,
+//					   19,
+//					   3.5,
+//					   'M');
+//	testStudent.PrintAll();
+//	cout << endl;
+//
+//	testStudent2.PrintAll();
+	#endif
+	test.PrintCS1C();
+
+	return 0;
+}

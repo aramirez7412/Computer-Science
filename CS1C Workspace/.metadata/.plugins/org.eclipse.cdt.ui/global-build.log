@@ -1,0 +1,49 @@
+12:19:51 **** Clean-only build of configuration Debug for project Assign8_Friends&Overloading.cpp ****
+rm -rf CheckCS1CId.d DateImplementation.d main.o StudentImplmentation.d CS1CImplementation.d StudentImplmentation.o DateImplementation.o Assign8_Friends&Overloading.cpp.exe CheckIDFunction.o MathStudentImplmentation.o OutputHeader.o CheckIDFunction.d MathStudentImplmentation.d CS1CImplementation.o OutputHeader.d CheckCS1CId.o main.d 
+12:19:58 **** Rebuild of configuration Debug for project Assign8_Friends&Overloading.cpp ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o CS1CImplementation.o "..\\CS1CImplementation.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o StudentImplmentation.o "..\\StudentImplmentation.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o DateImplementation.o "..\\DateImplementation.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o OutputHeader.o "..\\OutputHeader.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o CheckCS1CId.o "..\\CheckCS1CId.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o MathStudentImplmentation.o "..\\MathStudentImplmentation.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o CheckIDFunction.o "..\\CheckIDFunction.cpp" 
+g++ -o Assign8_Friends&Overloading.cpp.exe main.o StudentImplmentation.o OutputHeader.o MathStudentImplmentation.o DateImplementation.o CheckIDFunction.o CheckCS1CId.o CS1CImplementation.o 
+Info: Nothing to build for Assign8_Friends&Overloading.cpp
+Info: Nothing to build for Assign8_Friends&Overloading.cpp
+Info: Nothing to build for Assign8_Friends&Overloading.cpp
+14:49:51 **** Incremental Build of configuration Debug for project Assign8_Friends&Overloading.cpp ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o CheckCS1CId.o "..\\CheckCS1CId.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o CheckIDFunction.o "..\\CheckIDFunction.cpp" 
+g++ -o Assign8_Friends&Overloading.cpp.exe main.o StudentImplmentation.o OutputHeader.o MathStudentImplmentation.o DateImplementation.o CheckIDFunction.o CheckCS1CId.o CS1CImplementation.o 
+Info: Nothing to build for Assign8_Friends&Overloading.cpp
+14:51:52 **** Incremental Build of configuration Debug for project Assign8_Friends&Overloading.cpp ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o CheckCS1CId.o "..\\CheckCS1CId.cpp" 
+g++ -o Assign8_Friends&Overloading.cpp.exe main.o StudentImplmentation.o OutputHeader.o MathStudentImplmentation.o DateImplementation.o CheckIDFunction.o CheckCS1CId.o CS1CImplementation.o 
+main.o(.text+0xd5b): In function `main':
+E:/CS1C Workspace/Assign8_Friends&Overloading.cpp/Debug/../main.cpp:98: undefined reference to `CheckIdCS1C(CS1CStudent&, CS1CStudent&)'
+main.o(.text+0xdb3):E:/CS1C Workspace/Assign8_Friends&Overloading.cpp/Debug/../main.cpp:105: undefined reference to `CheckIdCS1C(CS1CStudent&, CS1CStudent&)'
+collect2: ld returned 1 exit status
+14:51:56 **** Incremental Build of configuration Debug for project Assign8_Friends&Overloading.cpp ****
+Info: Internal Builder is used for build
+g++ -o Assign8_Friends&Overloading.cpp.exe main.o StudentImplmentation.o OutputHeader.o MathStudentImplmentation.o DateImplementation.o CheckIDFunction.o CheckCS1CId.o CS1CImplementation.o 
+main.o(.text+0xd5b): In function `main':
+E:/CS1C Workspace/Assign8_Friends&Overloading.cpp/Debug/../main.cpp:98: undefined reference to `CheckIdCS1C(CS1CStudent&, CS1CStudent&)'
+main.o(.text+0xdb3):E:/CS1C Workspace/Assign8_Friends&Overloading.cpp/Debug/../main.cpp:105: undefined reference to `CheckIdCS1C(CS1CStudent&, CS1CStudent&)'
+collect2: ld returned 1 exit status
+14:52:18 **** Incremental Build of configuration Debug for project Assign8_Friends&Overloading.cpp ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.cpp" 
+g++ -o Assign8_Friends&Overloading.cpp.exe main.o StudentImplmentation.o OutputHeader.o MathStudentImplmentation.o DateImplementation.o CheckIDFunction.o CheckCS1CId.o CS1CImplementation.o 
+Info: Nothing to build for Assign8_Friends&Overloading.cpp
+Info: Nothing to build for Assign8_Friends&Overloading.cpp
+14:52:53 **** Incremental Build of configuration Debug for project Assign8_Friends&Overloading.cpp ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o CS1CImplementation.o "..\\CS1CImplementation.cpp" 
+g++ -o Assign8_Friends&Overloading.cpp.exe main.o StudentImplmentation.o OutputHeader.o MathStudentImplmentation.o DateImplementation.o CheckIDFunction.o CheckCS1CId.o CS1CImplementation.o 
+Info: Nothing to build for Assign8_Friends&Overloading.cpp
+Info: Nothing to build for Assign8_Friends&Overloading.cpp

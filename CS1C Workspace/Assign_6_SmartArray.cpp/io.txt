@@ -1,0 +1,47 @@
+**************************************************
+* Programmed by : Anthony Ramirez
+* Student ID    : 369397
+* CS1C          :6:00-8:50 PM
+* ASSIGNMENT #5 : Math Student Class
+**************************************************
+***************
+*    Part 1   *
+***************
+
+0 0
+1 10
+2 20
+3 30
+4 40
+5 50
+6 60
+7 70
+8 80
+9 90
+Store-invalid index: 11
+Value At- invalid index: 11
+
+Copy constructor is being called!
+***************
+*    Part 2   *
+***************
+
+0 0
+1 10
+2 20
+3 30
+4 40
+5 50
+6 60
+7 70
+8 80
+9 90
+
+3 arguments passed in.
+
+C:\Users\Anthony\Desktop\Assign_6_SmartArray.cpp\Debug\Assign_6_SmartArray.cpp
+First name: Anthony
+Last name : Ramirez
+
+Second letter of my first name: n
+Second letter of my last name: a

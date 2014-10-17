@@ -1,0 +1,110 @@
+/*******************************************************************************
+ * NAME     : Anthony Ramirez
+ * CLASS    : CS1C
+ * SECTION  : T/TH 6:00-8:50
+ * DATE     : 9/2/14
+ * ASSIGN #2: Deck Of Cards
+ *******************************************************************************/
+#include "Header.h"
+#include "DeckClass.h"
+
+/******************************************************************************
+ * Deck Of Cards
+ * ----------------------------------------------------------------------------
+ * This program will initialize three decks of cards. The "deck",
+ * "perfectShuffle", and "finalDeck" arrays will be in order from Clubs, Hearts,
+ * Spades and Diamonds. The "perfectShuffle" array will then be shuffled one
+ * time to imitate a perfect shuffle. The "finalDeck" array will be shuffled
+ * until it reaches its initial state.
+ * ------------------------------------------------------------------------------
+ * INPUT:
+ * 	NONE
+ *
+ * OUTPUT:
+ *  count: Stores the amount of times the "finalDeck" was shuffled until it
+ *  	   reached its initial state
+ *******************************************************************************/
+
+int main()
+{
+	//D E C L A R A T I O N S
+	Deck newDeck; //OUT - used to perform operations on and output decks
+	int  count;   //IN & OUT - used to store the amount of times the deck must
+	              //		   be shuffled in order to return the final deck
+				  //           to its initial state
+
+	/***************************************************************************
+	 * OutputHeader
+	 * -------------------------------------------------------------------------
+	 * This method is used to output the header to the console
+	 **************************************************************************/
+	OutputHeader(cout, "Anthony Ramirez", "CS1C",
+				 "6:00-8:50 PM", 2, "Deck Of Cards", 'A');
+
+	/***************************************************************************
+	 * O U T P U T
+	 * -------------------------------------------------------------------------
+	 * In the following segment of code the "deck", "finalDeck", and
+	 * "perfectShuffled" deck will be output
+	 ***************************************************************************/
+
+	cout << "Initial Deck of Cards   " << endl;
+	cout << "---------------------   " << endl;
+	/***************************************************************************
+	 * PrintDeck (Deck Class method)
+	 * -------------------------------------------------------------------------
+	 * This method will print the deck that is in the correct order.
+	 **************************************************************************/
+	newDeck.PrintDeck();
+
+	cout << endl << endl;
+
+	cout << "Perfectly Shuffled Deck " << endl;
+	cout << "----------------------- " << endl;
+
+	/***************************************************************************
+	 * PerfectShuffle (Deck Class method)
+	 * -------------------------------------------------------------------------
+	 * This method shuffles the "perfectShuffle" array once to create a deck
+	 * that is perfectly shuffled
+	 ***************************************************************************/
+	newDeck.PerfectShuffle();
+
+	/***************************************************************************
+	 * PrintShuffledDeck (Deck Class method)
+	 * -------------------------------------------------------------------------
+	 * This method prints the "perfectShuffle" array
+	 ***************************************************************************/
+	newDeck.PrintShuffledDeck();
+
+	cout << endl;
+	/***************************************************************************
+	 * ShuffleFinalUntilPerfect (Deck Class method)
+	 * -------------------------------------------------------------------------
+	 * This method will shuffle the "finalDeck" array until it reaches its
+	 * initial state
+	 *
+	 * RETURNS: integer
+	 ***************************************************************************/
+	count = newDeck.ShuffleFinalUntilPerfect();
+
+	cout << "\nIt takes exactly " << count << " perfect shuffles to " << endl
+		 << "return the final deck to it's initial state";
+	cout << endl << endl;
+
+	/***************************************************************************
+	 * PrintFinalDeck (Deck Class method)
+	 * -------------------------------------------------------------------------
+	 * This method prints the "finalDeck" array
+	 ***************************************************************************/
+	cout << "Shuffled Deck after " << count << " shuffles." << endl;
+	cout << "---------------------------------" << endl;
+	newDeck.PrintFinalDeck();
+
+
+
+
+
+
+	return 0;
+}

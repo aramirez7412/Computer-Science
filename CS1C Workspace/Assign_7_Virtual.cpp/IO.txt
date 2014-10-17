@@ -1,0 +1,54 @@
+**************************************************
+* Programmed by : Anthony Ramirez
+* Student ID    : 369397
+* CS1C          :6:00-8:50 PM
+* ASSIGNMENT #7 : Virtual Method
+**************************************************
+
+Math Student
+------------
+Using non-member print function!
+Name:                 Bob
+ID:                   12345
+Number:               909-456-7896
+Age:                  20
+Gender:               M
+Standing:             Sophomore
+GPA:                  3.90
+Street Address:  123 Hello
+City:            Irvine
+State:           Ca
+Zip code:        92612
+
+CS1C Student
+------------
+Using non-member print function!
+Name:                 JackP
+ID:                   956945
+Number:               909-899-9874
+Age:                  19
+Gender:               M
+Standing:             Sophomore
+GPA:                  2.00
+Assignment Score:     100
+Python Knowledge:     No
+Graduation Date:      5/16/2015
+
+Student
+------------
+Using non-member print function!
+Name:                 Charles
+ID:                   96325
+Number:               909-369-9874
+Age:                  18
+Gender:               M
+Standing:             Freshman
+GPA:                  0.00
+Virtual Destructor for CS1C called!
+
+Student virtual destructor called
+
+Student virtual destructor called
+
+Virtual Destructor Math Student called! #1
+Student virtual destructor called

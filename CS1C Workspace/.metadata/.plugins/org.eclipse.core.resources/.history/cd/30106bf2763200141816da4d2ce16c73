@@ -1,0 +1,401 @@
+/*******************************************************************************
+ * NAME     : Anthony Ramirez
+ * CLASS    : CS1C
+ * SECTION  : T/TH 6:00-8:50
+ * DATE     : /14
+ * ASSIGN #2: Deck Of Cards
+ *******************************************************************************/
+
+#include "DeckClass.h"
+
+/*******************************************************************************
+ * Deck Class Accessors and Mutators
+ *******************************************************************************/
+
+	Deck::Deck()
+	{
+		//D E C L A R A T I O N S
+
+
+		//I N I T I A L I Z A T I O N
+
+
+
+	}
+
+	Card::Card()
+	{
+		suit = " ";
+		rank = 0;
+	}
+
+	void Deck::PrintDeck()
+	{
+		for(int index = 0; index < SIZE; index++)
+		{
+			deck[index].PrintCard();
+		}
+	}
+	void Deck::PrintShuffledDeck()
+	{
+		for(int index = 0; index < SIZE; index++)
+		{
+			perfectShuffle[index].PrintCard();
+		}
+	}
+	void Deck::PrintFinalDeck()
+	{
+		for(int index = 0; index < SIZE; index++)
+		{
+			finalDeck[index].PrintCard();
+		}
+	}
+	void Deck::	InitializeDeck()
+	{
+		//D E C L A R A T I O N
+		int    index;      //CALC - used in for loop
+		string suit;       //CALC & IN - changes dependent on for loop and is
+						   //            used to set the a card suit
+		int    innerIndex; //CALC - used to traverse through 13 elements of an
+						   //       array
+		int    count;      //CALC - used in the primary for loop and is used
+						   //       to traverse through the "four suits"
+
+		//I N I T I A L I Z A T I O N S
+		count = 0;
+
+		/***********************************************************************
+		 * PROCESSING
+		 * ---------------------------------------------------------------------
+		 * This for loop iterates 4 times to replicate changing the suit four
+		 * times. Within the for loop there is a switch statement that will
+		 * assign the string variable called "suit" to its respective suit (based
+		 * on the index of the primary loop). Within each case there is a for
+		 * loop that runs for 13 times to initialize 13 cards with the same suit
+		 * and a rank 1 trough 13.
+		 ***********************************************************************/
+		//Begin For
+		for(index = 0; index <5; index++)
+		{
+			//Begin switch
+			switch(index)
+			{
+				case 1: //Initializes cards 0-11
+						suit = "Clubs";
+						//Begin For
+						for(innerIndex = 1; innerIndex <= 13; innerIndex++)
+						{
+							deck[count].SetAll(suit, innerIndex);
+
+							count++;
+						}//End for
+				break;
+				case 2: //Initializes cards 12-24
+						suit = "Spades";
+						//Begin For
+						for(innerIndex = 1; innerIndex <= 13; innerIndex++)
+						{
+							deck[count].SetAll(suit, innerIndex);
+							count++;
+						}//End For
+				break;
+				case 3: //Initializes cards 25-38
+						suit = "Hearts";
+						//Begin For
+						for(innerIndex = 1; innerIndex <= 13; innerIndex++)
+						{
+							deck[count].SetAll(suit, innerIndex);
+							count++;
+						}
+				break;
+				case 4: //Initializes cards 39-51
+						suit = "Diamonds";
+						//Begin For
+						for(innerIndex = 1; innerIndex <= 13; innerIndex++)
+						{
+							deck[count].SetAll(suit, innerIndex);
+							count++;
+						}//End For
+				break;
+				default://Default
+						cout << "\n****ERROR****\n";
+				break;
+			}
+		}
+		//Calls upon initialize All which uses the "deck" array as a reference to
+		//initialize all of the other arrays in the Deck class
+		InitializeAll();
+
+	}
+
+	void Deck::InitializeAll()
+	{
+		//D E C L A R A T I O N S
+		int index; //CALC - used in for loops
+
+		/***********************************************************************
+		 * PROCESSING
+		 * ---------------------------------------------------------------------
+		 * In the following code segment, the "perfectShuffle" and "finalDeck"
+		 * arrays will be initialized. The "deck" array is already initialized
+		 * to a normally ordered deck. The uninitialized arrays will now use
+		 * the "deck" array
+		 ***********************************************************************/
+
+		//Begin For
+		for(index = 0; index < SIZE; index++)
+		{
+			//Assigns the respective element in perfectShuffle to the deck
+			//element
+			perfectShuffle[index] =  deck[index];
+		}//End For
+
+		//Begin For
+		for(index = 0; index < SIZE; index++)
+		{
+			//Assigns the respective element in finalDeck to the deck
+			//element
+			finalDeck[index]      = deck[index];
+		}//End for
+	}
+
+	/***************************************************************************
+	 * PerfectShuffle
+	 * -------------------------------------------------------------------------
+	 * This method only modifies the "perfectShuffle" array. It takes the 26th
+	 * element of the perfect shuffle array and places it after the 0 element
+	 * and then takes the 27th element and places it after the 1st element and
+	 * so on
+	 **************************************************************************/
+	void Deck::PerfectShuffle()
+	{
+		//D E C L A R A T I O N S
+		int half;			  //CALC - Used as a reference to begin at half
+		int start;			  //CALC - Used as a reference to begin at the start
+		int index;			  //CALC - Used as a counter in the while loop
+		int forIndex;		  //CALC - Used in the for loop to initialize the
+							  //       temporary array
+		Card tempArray[SIZE]; //CALC - This temporary array is used to store all
+							  //       of the contents of perfectShuffle array
+
+		//I N I T I A L I Z A T I O N S
+		half  = SIZE / 2;
+		start = 0;
+		index = 0;
+
+		/***********************************************************************
+		 * PROCESSING
+		 * ---------------------------------------------------------------------
+		 * In this code segment all of the elements in the "perfectShuffle" array
+		 * will be assigned to each respective element of the tempArray. This is
+		 * done to perform the perfect shuffle without losing any data in the
+		 * "perfectShuffle" array. Then in a while loop the perfect shuffle is
+		 * performed. The first element of the "tempArray" is assigned to the
+		 * respective "perfectShuffle" array element. Next the index is
+		 * incremented and the next element that will be inserted into the
+		 * "perfectShuffle" array will be the half way point in the "tempArray"
+		 * both the start and half variables are incremented and will run until
+		 * the index reaches the "SIZE" (defined as a global constant)
+		 ***********************************************************************/
+
+		//Begin For
+		for(forIndex = 0; forIndex < SIZE; forIndex++)
+		{
+			tempArray[forIndex] = perfectShuffle[forIndex];
+		}//End For
+
+		//Begin While
+		while(index < SIZE)
+		{
+			perfectShuffle[index] = tempArray[start];
+			index++;
+			perfectShuffle[index] = tempArray[half];
+			half++;
+			start++;
+			index++;
+		}//End While
+	}
+
+	/***************************************************************************
+	 * ShuffleFinalDeckOnce
+	 * -------------------------------------------------------------------------
+	 * This method will perform one shuffle on the Final Deck.
+	 *  Similar to the
+	 * PerfectShuffle method, this method uses a temporary array to store the
+	 * contents of the finalDeck to shuffle without losing data
+	 ***************************************************************************/
+	void Deck::ShuffleFinalDeckOnce()
+	{
+		//D E C L A R A T I O N S
+		int index;			 //CALC - Used in the while loop
+		int half;			 //CALC - Used to reference the half point of the
+							 //		  array
+		int start;			 //CALC - Used to reference the starting point in
+							 //		  the array
+		int forIndex;		 //CALC - Used in the for loop to initialize the
+							 //		  temporary array
+		Card tempArray[SIZE];//CALC - Used to store the content of the "finalDeck"
+							 //		  array
+
+		//I N I T I A L I Z A T I O N S
+		index = 0;
+		start = 0;
+		half  = SIZE / 2;
+
+		/***********************************************************************
+		 * PROCESSING
+		 * ---------------------------------------------------------------------
+		 * The following code segment closely resembles the PerfectShuffle method.
+		 * In this code segment all of the elements in the "finalDeck" array
+		 * will be assigned to each respective element of the tempArray. This is
+		 * done to perform the perfect shuffle without losing any data in the
+		 * "finalDeck" array. Then in a while loop the perfect shuffle is
+		 * performed. The first element of the "tempArray" is assigned to the
+		 * respective "finalDeck" array element. Next the index is
+		 * incremented and the next element that will be inserted into the
+		 * "finalDeck" array will be the half way point in the "tempArray"
+		 * both the start and half variables are incremented and will run until
+		 * the index reaches the "SIZE" (defined as a global constant)
+		 ***********************************************************************/
+		//Begin For
+		for(forIndex = 0; forIndex < SIZE; forIndex++)
+		{
+			tempArray[forIndex] = finalDeck[forIndex];
+		}//End For
+
+		//Begin While
+		while(index < SIZE)
+		{
+			finalDeck[index] = tempArray[start];
+			index++;
+			finalDeck[index] = tempArray[half];
+			index++;
+			start++;
+			half++;
+		}//End While
+	}
+
+	/***************************************************************************
+	 * CheckFinalDeck
+	 * -------------------------------------------------------------------------
+	 * This method compares the content of the "finalDeck" array against the
+	 * "deck" array (which resembles a deck that is not shuffled. This method
+	 * is a helper method to ShuffleUntilPerfect. If the "finalDeck" array
+	 * differs from the "deck" array at any point while its being traversed
+	 * then the loop will terminate and the boolean variable will be returned
+	 * to the calling function
+	 *
+	 * RETURNS: None
+	 ***************************************************************************/
+	bool Deck::CheckFinalDeck()
+	{
+		//D E C L A R A T I O N S
+		int  index;	  //CALC - Used as a counter to traverse through the arrays
+		bool traverse;//CALC - Used as sentinel value for the while loop
+
+		//I N I T I A L I Z A T I O N S
+		index    = 0;
+		traverse = true;
+
+		//BEGIN While
+		while(traverse && index < SIZE)
+		{
+			//Checks the respective elements in "finalDeck" against "deck"
+			if((finalDeck[index].GetSuit() != deck[index].GetSuit()) &&
+			   (finalDeck[index].GetRank() != deck[index].GetRank()))
+			{
+				//Changes traverse to false to exit loop if they are not
+				//equal to each other
+				traverse = false;
+			}
+			else
+			{
+				//Increments the index to continue traversing the list
+				index++;
+			}
+		}
+
+		//Returns traverse
+		return traverse;
+
+	}
+	int Deck::ShuffleFinalUntilPerfect()
+	{
+		int count;
+
+		count = 1;
+
+		ShuffleFinalDeckOnce();
+
+		while(!(CheckFinalDeck()))
+		{
+			ShuffleFinalDeckOnce();
+			count++;
+		}
+
+		return count;
+	}
+	Card::Card(string newSuit, int rank)
+	{
+		SetAll(newSuit, rank);
+	}
+
+	void Card::SetSuit(string newSuit) //IN - used to set the new suit
+	{
+		//Assigns  newSuit to suit
+		suit = newSuit;
+	}
+	void Card::SetRank(int newRank)
+	{
+		//Assigns newRank into rank
+		rank = newRank;
+	}
+	void Card::SetAll(string newSuit, int newRank)
+	{
+		SetSuit(newSuit);
+		SetRank(newRank);
+	}
+
+	string Card::GetSuit()
+	{
+		return suit;
+	}
+	int Card::GetRank()
+	{
+		return rank;
+	}
+	void Card::PrintCard()
+	{
+		if(rank == 1)
+		{
+			cout << "Ace of " << GetSuit() << endl;
+		}
+		else if(rank == 11)
+		{
+			cout << "Jack of " << GetSuit() << endl;
+		}
+		else if(rank == 12)
+		{
+			cout << "Queen of " << GetSuit() << endl;
+		}
+		else if(rank == 13)
+		{
+			cout << "King of " << GetSuit() << endl;
+		}
+		else
+		{
+			cout << GetRank() << " of " << GetSuit() <<endl;
+		}
+	}
+	Deck::~Deck()
+	{
+
+	}
+	Card::~Card()
+	{
+	}
+
+
+
+
+

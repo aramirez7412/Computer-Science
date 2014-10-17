@@ -1,0 +1,75 @@
+**************************************************
+* Programmed by : Anthony Ramirez
+* Student ID    : 369397
+* CS1C          :6:00-8:50 PM
+* ASSIGNMENT #5 : Math Student Class
+**************************************************
+
+Copy constructor has been called.Student Information
+-------------------
+Name:            Joe Buck
+ID:              12345
+Number:          949-123-4564
+Age:             17
+Gender:          M
+Standing:        Freshman
+GPA:             3.50
+Graduation Date: 6/15/2017
+Street Address:  1234 Some Street
+City:            City of Intel
+State:           California
+Zip code:        91111
+
+Copy constructor has been called.
+Entering print function...
+
+Student Information
+-------------------
+Name:            Joe Buck
+ID:              12345
+Number:          949-123-4564
+Age:             17
+Gender:          M
+Standing:        Freshman
+GPA:             3.50
+Graduation Date: 6/15/2017
+Street Address:  1234 Some Street
+City:            City of Intel
+State:           California
+Zip code:        91111
+Exiting Print function
+
+Destructor called! #1
+Using overloaded operator, passing by reference.
+
+Copy constructor has been called.
+Destructor called! #1
+Copy constructor has been called.
+Entering Modify name function
+
+Copy constructor has been called.
+Using overloaded operator, passing by reference.
+
+Copy constructor has been called.
+Destructor called! #2
+Destructor called! #2
+Destructor called! #2
+
+Student Information
+-------------------
+Name:            John Cole
+ID:              12345
+Number:          626-890-2314
+Age:             17
+Gender:          M
+Standing:        Sophomore
+GPA:             3.10
+Graduation Date: 2/15/2017
+Street Address:  1234 Rockview Drive
+City:            Irvine
+State:           CA
+Zip code:        91612
+
+Destructor called! #1
+Destructor called! #2
+Destructor called! #1

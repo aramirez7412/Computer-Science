@@ -1,0 +1,57 @@
+**************************************************
+* Programmed by : Anthony Ramirez
+* Student ID    : 369397
+* CS1C          :6:00-8:50 PM
+* ASSIGNMENT #3 : Student Class
+**************************************************
+
+Enter the proper information to continue.
+Enter Name:          Jack Johnson
+Enter ID:            123456
+Enter phone number:  909-123-4567
+Enter age:           21
+Enter Gender:        M
+Enter Class Standing: Freshman
+Enter GPA:           3.5
+Enter year of month, day, and year of graduation: 06 15 2014
+Enter Score: 98
+Enter python knowledge (Y/N): Y
+Student Information
+-------------------
+Name:            Jack Johnson
+ID:              123456
+Number:          909-123-4567
+Age:             21
+Gender:          M
+Standing:        Freshman
+GPA:             3.50
+Graduation Date: 6/15/2014
+
+CS1C Student Information
+------------------------
+Name:                Jack Johnson
+Assignment Score:    98
+Python Knowledge:    Yes
+Graduation Date:     6/15/2014
+
+Student Information
+-------------------
+Name:            Bill Gates
+ID:              543210
+Number:          909-456-7891
+Age:             60
+Gender:          M
+Standing:        Frshman
+GPA:             4.00
+Graduation Date: 6/13/2014
+
+Student Information
+-------------------
+Name:            Drew Brees
+ID:              164976
+Number:          909-967-4123
+Age:             45
+Gender:          M
+Standing:        Senior
+GPA:             3.50
+Graduation Date: 7/10/2014

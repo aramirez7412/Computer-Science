@@ -1,0 +1,18 @@
+
+#ifndef CYLINDERCLASS_H_
+#define CYLINDERCLASS_H_
+#include "CircleType.h"
+
+class Cylinder : public CircleType
+{
+
+private:
+	double height;
+
+public:
+	void SetRadius();
+
+};
+
+
+#endif /* CYLINDERCLASS_H_ */

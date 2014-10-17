@@ -1,0 +1,124 @@
+/*
+ * CircleType.h
+ *
+ *  Created on: Sep 2, 2014
+ *      Author: Anthony
+ */
+
+#ifndef CIRCLETYPE_H_
+#define CIRCLETYPE_H_
+
+
+
+/*******************************************************************************
+ * NAME   : Anthony Ramirez
+ * CLASS  : CS1C
+ * SECTION: T/TH 6:00-8:50
+ * DATE   : 9/4/14
+ * LAB #3 : Shapes and Inheritance
+ *******************************************************************************/
+
+class CircleType
+{
+	//P R I V A T E
+private:
+
+	double radius; //-radius
+
+	//P U B L I C
+	public:
+	//C O N S T R U C T O R
+	/***************************************************************************
+	 * CirclType (Constructor)
+	 * -------------------------------------------------------------------------
+	 * This method will initialize the private member "radius" to 0
+	 *
+	 * POST-CONDITIONS: radius = r; Initialized to 0
+	 ***************************************************************************/
+	CircleType(double r = 0);
+
+	//M U T A T O R S
+	/***************************************************************************
+	 * +SetRadius
+	 * -------------------------------------------------------------------------
+	 * This method will set the radius of the circle object
+	 *
+	 * POST-CONDITIONS: if(r>=0 radius = r;
+	 * 					otherwise radius is initialized to 0;
+	 ***************************************************************************/
+	void SetRadius(double r);
+
+	/***************************************************************************
+	 * +Area
+	 * -------------------------------------------------------------------------
+	 * This method will calculate and return the Area with the given radius
+	 *
+	 * POST-CONDITION: a double is returned holding the Area value
+	 ***************************************************************************/
+	double Area() const;
+
+	/***************************************************************************
+	 * +Circumference
+	 * -------------------------------------------------------------------------
+	 * This method will calculate and return the Circumference with the given
+	 * radius.
+	 *
+	 * POST-CONDITION: a double is returned holding the Circumference value
+	 ***************************************************************************/
+	double Circumference() const;
+
+	//A C C E S S O R S
+	/***************************************************************************
+	 * +GetRadius
+	 * -------------------------------------------------------------------------
+	 * This method returns the radius
+	 *
+	 * POST-CONDITION returns the radius
+	 ***************************************************************************/
+	double GetRadius() const;
+
+	/***************************************************************************
+	 * +PrintAll
+	 * -------------------------------------------------------------------------
+	 * This method prints the Area, Circumference, and radius
+	 *
+	 * POST-CONDITIONS:
+	 *
+	 */
+	void PrintAll() const;
+
+
+
+
+};
+
+void CircleType::SetRadius(double r)
+{
+	if (r >=0)
+		radius = r;
+	else
+		radius = 0;
+}
+
+double CircleType::GetRadius() const
+{
+	return radius;
+}
+
+double CircleType::Area() const
+{
+	return 3.1416*radius*radius;
+}
+
+double CircleType::Circumference() const
+{
+	return 2*3.1416*radius;
+}
+
+CircleType::CircleType(double r)
+{
+	SetRadius(r);
+}
+
+
+#endif /* CIRCLETYPE_H_ */

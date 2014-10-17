@@ -1,0 +1,26 @@
+/*******************************************************************************
+ * NAME   : Anthony Ramirez
+ * CLASS  : CS1C
+ * SECTION: T/TH 6:00-8:50
+ * DATE   : 9/4/14
+ * LAB #3 : Shapes and Inheritance
+ *******************************************************************************/
+
+#include "Header.h"
+
+/*******************************************************************************
+ * ModifyHeight
+ * -----------------------------------------------------------------------------
+ * This function will modify the height with the Cylinder class
+ * -----------------------------------------------------------------------------
+ * PRE-CONDITIONS
+ *
+ * 		Cylinder type must be previously defined
+ *
+ * POST-CONDITIONS
+ * 		Sets the height within the cylinder class
+ */
+void ModifyHeight(CylinderType & cyl)
+{
+
+}

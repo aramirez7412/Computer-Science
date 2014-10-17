@@ -1,0 +1,80 @@
+/*******************************************************************************
+ * NAME     : Anthony Ramirez
+ * CLASS    : CS1C
+ * SECTION  : T/TH 6:00-8:50
+ * DATE     : /14
+ * ASSIGN #2: Deck Of Cards
+ *******************************************************************************/
+#ifndef DECKCLASS_H_
+#define DECKCLASS_H_
+
+#include "CardClass.h"
+#include <string>
+#include <iostream>
+using namespace std;
+
+const int SIZE = 52;
+class Deck
+{
+	public:
+
+	/***************************************************************************
+	 * Deck (constuctor)
+	 * -------------------------------------------------------------------------
+	 * This method is the constructor and is used to instantiate an instance of
+	 * the Deck Class
+	 ***************************************************************************/
+	Deck();
+
+	/***************************************************************************
+	 * ~Deck (destructor)
+	 * -------------------------------------------------------------------------
+	 * This is the destructor of the class and is used to destruct an instance
+	 ***************************************************************************/
+	~Deck();
+
+	/***************************************************************************
+	 * PerfectShuffle
+	 * -------------------------------------------------------------------------
+	 * This is method is used to shuffle an array of cards one time to create
+	 * a perfect shuffle
+	 ***************************************************************************/
+	void PerfectShuffle();
+
+	/***************************************************************************
+	 * PrintDeck
+	 * -------------------------------------------------------------------------
+	 * This method prints the "deck" array of cards to the console
+	 ***************************************************************************/
+	void PrintDeck();
+
+	/***************************************************************************
+	 * PrintShuffledDeck
+	 * -------------------------------------------------------------------------
+	 * This method prints "perfectShuffle" array to the console
+	 ***************************************************************************/
+	void PrintShuffledDeck();
+
+	/***************************************************************************
+	 * InititalizeDeck
+	 * -------------------------------------------------------------------------
+	 *
+	 ***************************************************************************/
+	void InitializeDeck();
+	void PrintFinalDeck();
+	void InitializeAll();
+	void ShuffleFinalDeckOnce();
+	int ShuffleFinalUntilPerfect();
+	bool CheckFinalDeck();
+
+
+	private:
+
+	Card deck[52];
+	Card perfectShuffle[52];
+	Card finalDeck[52];
+};
+
+
+
+#endif /* DECKCLASS_H_ */

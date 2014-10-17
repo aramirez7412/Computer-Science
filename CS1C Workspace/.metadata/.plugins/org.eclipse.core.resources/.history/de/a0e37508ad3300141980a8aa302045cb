@@ -1,0 +1,66 @@
+
+#ifndef CYLINDERCLASS_H_
+#define CYLINDERCLASS_H_
+#include "CircleType.h"
+
+#define pi 3.1416
+
+class CylinderType : public CircleType
+{
+
+private:
+	double height;
+
+public:
+	CylinderType();
+	~CylinderType();
+
+	void SetHeight(double newHeight);
+	void SetRadius(double newRadius);
+	void PromptUserForRadius(double newRadius);
+
+	//A C C E S S O R S
+	double Volume();
+	double SurfaceArea();
+};
+
+
+#endif /* CYLINDERCLASS_H_ */
+
+/*******************************************************************************
+ * SetHeight
+ * -----------------------------------------------------------------------------
+ * This method will set the -height member
+ *
+ * POST-CONDITION newHeight will be assigned to height
+ ******************************************************************************/
+void CylinderType::SetHeight(double newHeight)
+{
+	height = newHeight;
+}
+
+double CylinderType::SurfaceArea()
+{
+	double radius;
+
+	CircleType::GetRadius();
+	return (2*pi*radius*radius) + (2*pi*radius*height);
+}
+/*******************************************************************************
+ * SetRadius
+ * -----------------------------------------------------------------------------
+ * This method will set the -radius
+ *
+ * POST-CONDITION radius will be assigned to
+ ******************************************************************************/
+void CylinderType::SetRadius(double newRadius)
+{
+	CircleType::SetRadius(newRadius);
+
+}
+double CylinderType::Volume()
+{
+	double radius = CircleType::GetRadius();
+
+	return 3.1416*radius*radius*height;
+}

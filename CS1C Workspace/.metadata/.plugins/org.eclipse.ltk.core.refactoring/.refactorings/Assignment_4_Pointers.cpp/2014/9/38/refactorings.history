@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Assignment_4_Pointers.cpp/PrintTableHeader.h&apos; to &apos;PrintTableHeader.cpp&apos;" description="Rename resource &apos;PrintTableHeader.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="PrintTableHeader.h" name="PrintTableHeader.cpp" stamp="1410858194503" updateReferences="true"/>
+</session>

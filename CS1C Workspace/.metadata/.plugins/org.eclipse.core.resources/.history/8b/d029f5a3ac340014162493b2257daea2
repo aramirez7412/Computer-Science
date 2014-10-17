@@ -1,0 +1,180 @@
+**************************************************
+* Programmed by : Anthony Ramirez
+* Student ID    : 369397
+* CS1C          :6:00-8:50 PM
+* LAB # 2       : C-string concatenation
+**************************************************
+Please enter radius to continue operations: 6.3
+
+MAIN MENU 
+---------
+***Current Radius 6.3***
+1 - Circle Operations
+2 - Cylinder Operations
+3 - Change Radius
+0 - Exit Program
+Please enter a menu option: 1
+
+CIRCLE MENU 
+ -----------
+***Current Radius 6.3***
+1 - Calculate Area
+2 - Calculate Circumference
+3 - Print All
+4 - Enter new radius
+5 - Go to Cylinder Operations
+0 - Exit To Main Menu
+Please enter a menu option: 1
+
+The area is 125
+
+CIRCLE MENU 
+ -----------
+***Current Radius 6.3***
+1 - Calculate Area
+2 - Calculate Circumference
+3 - Print All
+4 - Enter new radius
+5 - Go to Cylinder Operations
+0 - Exit To Main Menu
+Please enter a menu option: 2
+
+The circumference is 39.6
+
+CIRCLE MENU 
+ -----------
+***Current Radius 6.3***
+1 - Calculate Area
+2 - Calculate Circumference
+3 - Print All
+4 - Enter new radius
+5 - Go to Cylinder Operations
+0 - Exit To Main Menu
+Please enter a menu option: 3
+
+Radius:        6.3
+Circumference: 39.6
+Area:          125
+
+CIRCLE MENU 
+ -----------
+***Current Radius 6.3***
+1 - Calculate Area
+2 - Calculate Circumference
+3 - Print All
+4 - Enter new radius
+5 - Go to Cylinder Operations
+0 - Exit To Main Menu
+Please enter a menu option: 4
+Please enter radius to continue operations: 1.2
+
+CIRCLE MENU 
+ -----------
+***Current Radius 1.2***
+1 - Calculate Area
+2 - Calculate Circumference
+3 - Print All
+4 - Enter new radius
+5 - Go to Cylinder Operations
+0 - Exit To Main Menu
+Please enter a menu option: 5
+
+CYLINDER MENU 
+-------------
+***Current Radius 1.2***
+1 - Calculate Surface Area
+2 - Calculate Volume
+3 - Print All
+4 - Enter new radius
+5 - Go to Circle Operations
+0 - Exit To Main Menu
+***Please enter a number between 0 and 51
+
+The surface area is 9.05
+
+CYLINDER MENU 
+-------------
+***Current Radius 1.2***
+1 - Calculate Surface Area
+2 - Calculate Volume
+3 - Print All
+4 - Enter new radius
+5 - Go to Circle Operations
+0 - Exit To Main Menu
+Please enter a menu option: 2
+
+The circumference is 0
+
+CYLINDER MENU 
+-------------
+***Current Radius 1.2***
+1 - Calculate Surface Area
+2 - Calculate Volume
+3 - Print All
+4 - Enter new radius
+5 - Go to Circle Operations
+0 - Exit To Main Menu
+Please enter a menu option: 3
+
+The radius is:      1.2
+The volume is:      0
+The surface area is:9.05
+
+CYLINDER MENU 
+-------------
+***Current Radius 1.2***
+1 - Calculate Surface Area
+2 - Calculate Volume
+3 - Print All
+4 - Enter new radius
+5 - Go to Circle Operations
+0 - Exit To Main Menu
+Please enter a menu option: 4
+Please enter radius to continue operations: -9
+***-9 is not valid input            ****
+***Enter a number between 0 and 2000****
+Please enter radius to continue operations: 7.5
+
+CYLINDER MENU 
+-------------
+***Current Radius 7.5***
+1 - Calculate Surface Area
+2 - Calculate Volume
+3 - Print All
+4 - Enter new radius
+5 - Go to Circle Operations
+0 - Exit To Main Menu
+Please enter a menu option: 1
+
+The surface area is 353
+
+CYLINDER MENU 
+-------------
+***Current Radius 7.5***
+1 - Calculate Surface Area
+2 - Calculate Volume
+3 - Print All
+4 - Enter new radius
+5 - Go to Circle Operations
+0 - Exit To Main Menu
+Please enter a menu option: 0
+
+CIRCLE MENU 
+ -----------
+***Current Radius 7.5***
+1 - Calculate Area
+2 - Calculate Circumference
+3 - Print All
+4 - Enter new radius
+5 - Go to Cylinder Operations
+0 - Exit To Main Menu
+Please enter a menu option: 0
+
+MAIN MENU 
+---------
+***Current Radius 7.5***
+1 - Circle Operations
+2 - Cylinder Operations
+3 - Change Radius
+0 - Exit Program
+Please enter a menu option: 0

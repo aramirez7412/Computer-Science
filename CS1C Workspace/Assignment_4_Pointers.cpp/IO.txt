@@ -1,0 +1,50 @@
+**************************************************
+* Programmed by : Anthony Ramirez
+* Student ID    : 369397
+* CS1C          :6:00-8:50 PM
+* ASSIGNMENT #4 : Election
+**************************************************
+Welcome to the Election Calculation Software. 
+To continue you must enter the amount of      
+candidates in the election. The percentage of 
+votes each candidate received will be output  
+
+Please enter the amount of candidates in the election: 5
+
+Is 5 the correct amount of candidates? (Y/N): Y
+
+Thank you. Next, you must enter the 
+ full name of each candidate followed 
+by the amounts of votes received
+
+Please enter the name of the candidate:    Jones
+Please enter the amount of votes received: 5000
+
+Please enter the name of the candidate:    Frolov
+Please enter the amount of votes received: 4000
+
+Please enter the name of the candidate:    Nguyen
+Please enter the amount of votes received: 6000
+
+Please enter the name of the candidate:    Steinberg
+Please enter the amount of votes received: 2500
+
+Please enter the name of the candidate:    Vinton
+Please enter the amount of votes received: 1800
+
+
+RESULTS!
+--------
+
+Candidate         Votes    Percent
+--------          ------   -------
+Jones              5000    25.91%
+Frolov             4000    20.73%
+Nguyen             6000    31.09%
+Steinberg          2500    12.95%
+Vinton             1800     9.33%
+
+
+Total Votes: 19300
+
+The winner is: Nguyen with 6000 votes.

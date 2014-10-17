@@ -1,0 +1,79 @@
+/*******************************************************************************
+ * NAME   : Anthony Ramirez
+ * CLASS  : CS1C
+ * SECTION: T/TH 6:00-8:50
+ * DATE   : 9/4/14
+ * LAB #3 : Shapes and Inheritance
+ *******************************************************************************/
+
+class circleType
+{
+	//P R I V A T E
+	private:
+
+	double radius;
+
+	//P U B L I C
+	public:
+	/***************************************************************************
+	 * SetRadius
+	 * -------------------------------------------------------------------------
+	 * This method will set the radius of the circle object
+	 *
+	 * POST-CONDITIONS: if(r>=0 radius = r;
+	 * 					otherwise radius is initialized to 0;
+	 ***************************************************************************/
+	void SetRadius(double r);
+
+	/***************************************************************************
+	 * GetRadius
+	 * -------------------------------------------------------------------------
+	 * This method returns the radius
+	 */
+	double GetRadius() const;
+			//Function to return the radius.
+			//Postcondition: The value of the radius is returned.
+
+		double Area();
+			//Function to return the eare of a circle.
+			//Postcondidtion: Area is calculated and returned.
+
+		double Circumference();
+			//Function to return the circumference of a circle.
+			//Postcondition: Circumference is calculated and returned.
+
+		circleType(double r = 0);
+			//Constructor with a default parameter.
+			//Radius is set according to the parameter.
+			//The default value of the radius is 0.0;
+			//Postcondition: radius = r;
+
+};
+
+void circleType::SetRadius(double r)
+{
+	if (r >=0)
+		radius = r;
+	else
+		radius = 0;
+}
+
+double circleType::GetRadius() const
+{
+	return radius;
+}
+
+double circleType::Area()
+{
+	return 3.1416*radius*radius;
+}
+
+double circleType::Circumference()
+{
+	return 2*3.1416*radius;
+}
+
+circleType::circleType(double r)
+{
+	SetRadius(r);
+}

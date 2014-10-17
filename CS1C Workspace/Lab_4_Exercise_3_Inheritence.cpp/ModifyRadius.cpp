@@ -1,0 +1,43 @@
+/*******************************************************************************
+ * NAME   : Anthony Ramirez
+ * CLASS  : CS1C
+ * SECTION: T/TH 6:00-8:50
+ * DATE   : 9/4/14
+ * LAB #3 : Shapes and Inheritance
+ *******************************************************************************/
+
+#include "Header.h"
+
+/*******************************************************************************
+ * ModifyRadius
+ * -----------------------------------------------------------------------------
+ * This function will allow the user to modify the radius
+ * -----------------------------------------------------------------------------
+ * PRE - CONDITIONS
+ *
+ * CylinderType and Class Type interfaces and implementation must be previosuly
+ * defined.
+ *
+ * cyl: Used to modify radius and must be previously defined
+ *
+ * POST - CONDITIONS
+ *
+ * Modifies cyl's -radius
+ *
+ * RETURNS none
+ *******************************************************************************/
+void ModifyRadius(CylinderType & cyl)//IN & OUT - used to set radius
+{
+	//D E C L R A T I O N
+	double newRadius; //IN - used to set radius
+
+	//Retrieves an error checked double
+	newRadius = PromptUserForDoubleInput("***Please enter a NUMBER***",
+										 "***Enter a number between 0 and 2000",
+										 "Please enter radius to continue operations: ",
+										 0.0,
+										 2000.0);
+
+	//Sets radius to newRadius
+	cyl.SetRadius(newRadius);
+}

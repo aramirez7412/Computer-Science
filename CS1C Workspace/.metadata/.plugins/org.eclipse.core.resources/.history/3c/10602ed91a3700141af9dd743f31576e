@@ -1,0 +1,142 @@
+/*******************************************************************************
+ * NAME     : Anthony Ramirez
+ * CLASS    : CS1C
+ * SECTION  : T/TH 6:00-8:50
+ * DATE     : 9/9/14
+ * ASSIGN #3: Student Class
+ *******************************************************************************/
+
+#ifndef CS1CSTUDENT_H_
+#define CS1CSTUDENT_H_
+
+#include "StudentClass.h"
+
+class CS1CStudent: public Student
+{
+private:
+	/**************************
+	 *      			      *
+	 *     -P R I V A T E-    *
+	 *      				  *
+	 **************************/
+
+	long   assignmentScore;
+	char   pythonKnowledge;
+	string graduationDate;
+
+public:
+	/**************************
+	 * 						  *
+	 *      +P U B L I C+  	  *
+	 *            		      *
+	 **************************/
+
+	//C O N S T R U C T O R S
+	/***************************************************************************
+	 * CS1CStudent Constructor
+	 * -------------------------------------------------------------------------
+	 * This is the default constructor for the CS1CStudent class and will
+	 * initialize private members to zero
+	 *
+	 * Returns: All private members initialized to zero
+	 ***************************************************************************/
+	CS1CStudent():Student();
+
+	/***************************************************************************
+	 * CS1C Student Constructor (non-default)
+	 * -------------------------------------------------------------------------
+	 * This is the non-default constructor for the student class and will
+	 * initialize private members to the parameters being passed in
+	 *
+	 * Returns: All private members initialized to respective parameter
+	 ***************************************************************************/
+	CS1CStudent(string 		   newName,
+				string 		   newStanding,
+				string 		   newNumber,
+				long 		   newId,
+				unsigned short newAge,
+				double 		   newGpa,
+				char 		   newGender,
+				long 		   newScore,
+				char 		   pythonKnowledge,
+				string		   graduationDate);
+
+	/*********************
+	 *  M U T A T O R S  *
+	 *********************/
+	/***************************************************************************
+	 * SetScore
+	 * -------------------------------------------------------------------------
+	 * This method will set the -assignmentScore member in the object
+	 *
+	 * RETURNS: none
+	 **************************************************************************/
+	void SetScore(long newScore);
+
+	/***************************************************************************
+	 * SetPythonKnowledge
+	 * -------------------------------------------------------------------------
+	 * This method will set the -pythonKnowledge variable
+	 *
+	 * RETURNS: none
+	 **************************************************************************/
+	void SetPythonKnowledge(char check);
+
+	/***************************************************************************
+	 * SetGraduationDate
+	 * -------------------------------------------------------------------------
+	 * This method will set the -graduationDate member in the object
+	 *
+	 * RETURNS: none
+	 **************************************************************************/
+	void SetGraduationDate(string newDate);
+
+
+	/***************************************************************************
+	 * SetAll
+	 * -------------------------------------------------------------------------
+	 * This method will set all the private members and the members from the
+	 * super class
+	 *
+	 * RETURNS: none
+	 **************************************************************************/
+	void SetAllCS1C(long 		   newScore,
+					char 		   pythonKnowledge,
+					string		   graduationDate);
+
+	/*********************
+	 * A C C E S S O R S *
+	 *********************/
+
+	/***************************************************************************
+	 * GetAssignmentScore
+	 * -------------------------------------------------------------------------
+	 * This method will get -assignmentScore in the object
+	 *
+	 * RETURNS: none
+	 **************************************************************************/
+	long GetAssignmentScore();
+
+	/***************************************************************************
+	 * GetPythonKnowledge
+	 * -------------------------------------------------------------------------
+	 * This method will get -pythonKnowledge in the object
+	 *
+	 * RETURNS: char
+	 **************************************************************************/
+	char  GetPythonKnowledge();
+
+
+	/***************************************************************************
+	 * GetDate
+	 * -------------------------------------------------------------------------
+	 * This method will get -graduationDate in the object
+	 *
+	 * RETURNS: string
+	 **************************************************************************/
+	string GetDate();
+
+
+};
+
+#endif /* STUDENTCLASS_H_ */

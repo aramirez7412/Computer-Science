@@ -1,0 +1,306 @@
+/*******************************************************************************
+ * NAME     : Anthony Ramirez
+ * CLASS    : CS1C
+ * SECTION  : T/TH 6:00-8:50
+ * DATE     : 9/9/14
+ * ASSIGN #3: Student Class
+ *******************************************************************************/
+
+#ifndef STUDENTCLASS_H_
+#define STUDENTCLASS_H_
+
+#include "Date.h"
+#include <string>
+#include <iomanip>
+#include <iostream>
+#include <ios>
+#include <limits>
+using namespace std;
+
+class Student
+{
+private:
+	/**************************
+	 *      			      *
+	 *     -P R I V A T E-    *
+	 *      				  *
+	 **************************/
+
+	string 		   name;
+	string         classStanding;
+	string         phoneNumber;
+	long   		   id;
+	unsigned short age;
+	double         gpa;
+	char           gender;
+	Date           graduationDate;
+
+	/**************************
+	 * 						  *
+	 *      +P U B L I C+  	  *
+	 *            		      *
+	 **************************/
+public:
+	//C O N S T R U C T O R S
+	/***************************************************************************
+	 * Student Constructor
+	 * -------------------------------------------------------------------------
+	 * This is the default constructor for the student class and will initialize
+	 * private members to zero
+	 *
+	 * Returns: All private members initialized to zero
+	 ***************************************************************************/
+	Student();
+
+	/***************************************************************************
+	 * Student Constructor (non-default)
+	 * -------------------------------------------------------------------------
+	 * This is the non-default constructor for the student class and will
+	 * initialize private members to the parameters being passed in
+	 *
+	 * Returns: All private members initialized to respective parameter
+	 ***************************************************************************/
+	Student(string 		   newName,
+			string 		   newStanding,
+		    string 		   newNumber,
+		    long 		   newId,
+			unsigned short newAge,
+		    double 		   newGpa,
+		    char 		   newGender,
+		    int            newMonth,
+		    int            newDay,
+		    int            newYear);
+
+	/*********************
+	 *  M U T A T O R S  *
+	 *********************/
+
+	/***************************************************************************
+	 * SetName
+	 * -------------------------------------------------------------------------
+	 * This method will set -name by assigning the value of newName
+	 *
+	 * Returns: All private members initialized to respective parameter
+	 ***************************************************************************/
+	void SetName	(string newName);
+
+	/***************************************************************************
+	 * SetStanding
+	 * -------------------------------------------------------------------------
+	 * This method will set -classStanding by assigning the value of newStanding
+	 *
+	 * Returns: classStanding = newStanding;
+	 ***************************************************************************/
+	void SetStanding(string newStanding);
+
+	/***************************************************************************
+	 * SetNumber
+	 * -------------------------------------------------------------------------
+	 * This method will set -phoneNumber by assigning the value of newNumber
+	 *
+	 * Returns: -phoneNumber = newNumber;
+	 ***************************************************************************/
+	void SetNumber	(string newNumber);
+
+	/***************************************************************************
+	 * SetAge
+	 * -------------------------------------------------------------------------
+	 * This method will set -age by assigning the value of newAge
+	 *
+	 * Returns: age = newAge;
+	 ***************************************************************************/
+	void SetAge		(unsigned short newAge);
+
+	/***************************************************************************
+	 * SetGpa
+	 * -------------------------------------------------------------------------
+	 * This method will set -gpa by assigning the value of newGpa
+	 *
+	 * Returns: -gpa = newGpa;
+	 ***************************************************************************/
+	void SetGpa     (double newGpa);
+
+	/***************************************************************************
+	 * SetGender
+	 * -------------------------------------------------------------------------
+	 * This method will set -gender by assigning the value of newGender
+	 *
+	 * Returns: -gender = newGender;
+	 ***************************************************************************/
+	void SetGender  (char newGender);
+
+	/***************************************************************************
+	 * SetId
+	 * -------------------------------------------------------------------------
+	 * This method will set -id by assigning the value of newId
+	 *
+	 * Returns: -id = newId;
+	 ***************************************************************************/
+	void SetId      (long newId);
+
+	/***************************************************************************
+	 * SetMonth
+	 * -------------------------------------------------------------------------
+	 * This method will set -month by assigning the value of newName
+	 *
+	 * Returns: All private members initialized to respective parameter
+	 ***************************************************************************/
+	void SetMonth	(int newMonth);
+
+	/***************************************************************************
+	 * SetDay
+	 * -------------------------------------------------------------------------
+	 * This method will set -date by assigning the value of newDay
+	 *
+	 * Returns: day = newDay;
+	 ***************************************************************************/
+	void SetDay(int newDay);
+
+
+	/***************************************************************************
+	 * SetYear
+	 * -------------------------------------------------------------------------
+	 * This method will set -year by assigning the value of newYear
+	 *
+	 * Returns: year = newYear;
+	 ***************************************************************************/
+	void SetYear (int newYear);
+
+	/***************************************************************************
+	 * SetDate
+	 * -------------------------------------------------------------------------
+	 * This method will set -date by concatenating all private members
+	 *
+	 * Returns: date in string format
+	 ***************************************************************************/
+	void SetDate	();
+
+	/***************************************************************************
+	 * SetAllDate
+	 * -------------------------------------------------------------------------
+	 * This method will set all private members
+	 *
+	 * Returns: All members will be assigned a value
+	 ***************************************************************************/
+	void SetAllDate(int newMonth,
+					int newDay,
+					int newYear);
+
+
+
+	/***************************************************************************
+	 * SetAll
+	 * -------------------------------------------------------------------------
+	 * This method will set all private members
+	 *
+	 * Returns: All members will be assigned a value
+	 ***************************************************************************/
+	void SetAll(string 		   newName,
+				string 		   newStanding,
+				string 		   newNumber,
+				long   		   newId,
+				unsigned short newAge,
+				double 		   newGpa,
+				char 		   newGender,
+				int			   month,
+				int 		   day,
+				int 		   year);
+
+
+	/*********************
+	 * A C C E S S O R S *
+	 *********************/
+
+	/***************************************************************************
+	 * GetName (const)
+	 * -------------------------------------------------------------------------
+	 * This method will return the name of the object
+	 *
+	 * Returns: string (-name member is returned)
+	 ***************************************************************************/
+	string 		   GetName() const;
+
+	/***************************************************************************
+	 * GetStanding
+	 * -------------------------------------------------------------------------
+	 * This method will return the class standing of the object
+	 *
+	 * Returns: string (-classStanding)
+	 ***************************************************************************/
+	string 		   GetStanding() const;
+
+	/***************************************************************************
+	 * GetNumber
+	 * -------------------------------------------------------------------------
+	 * This method will return the phone number of the object
+	 *
+	 * Returns: string(-phoneNumber)
+	 ***************************************************************************/
+	string 		   GetNumber() const;
+
+	/***************************************************************************
+	 * GetId
+	 * -------------------------------------------------------------------------
+	 * This method will return the id of the object
+	 *
+	 * Returns: long(-id)
+	 ***************************************************************************/
+	long   		   GetId() const;
+
+	/***************************************************************************
+	 * GetNewAge
+	 * -------------------------------------------------------------------------
+	 * This method will return the age of the object
+	 *
+	 * Returns: string(-age)
+	 ***************************************************************************/
+	unsigned short GetAge() const;
+
+	/***************************************************************************
+	 * GetNumber
+	 * -------------------------------------------------------------------------
+	 * This method will return the phone number of the object
+	 *
+	 * Returns: string(-phoneNumber)
+	 ***************************************************************************/
+	double 		   GetGpa() const;
+
+	/***************************************************************************
+	 * GetGender
+	 * -------------------------------------------------------------------------
+	 * This method will return the gender of the object
+	 *+++
+	 * Returns: string(-gender)
+	 ***************************************************************************/
+	char 		   GetGender() const;
+
+	/***************************************************************************
+	 * GetDate
+	 * -------------------------------------------------------------------------
+	 * This method will return the phone number of the object
+	 *
+	 * Returns: string(-phoneNumber)
+	 ***************************************************************************/
+	string 		   GetDate() const;
+
+
+	/***************************************************************************
+	 * PropagateStudent
+	 * -------------------------------------------------------------------------
+	 * This method will prompt the user for each input
+	 *
+	 * Returns:
+	 ***************************************************************************/
+	void PropagateStudent();
+
+	/***************************************************************************
+	 * PrintAll
+	 * -------------------------------------------------------------------------
+	 * This method will print the attributes of the object
+	 *
+	 * Returns: none
+	 ***************************************************************************/
+	void PrintAll() const;
+};
+
+#endif /* STUDENTCLASS_H_ */

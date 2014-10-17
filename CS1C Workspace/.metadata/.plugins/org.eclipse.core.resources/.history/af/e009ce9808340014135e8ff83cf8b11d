@@ -1,0 +1,35 @@
+/*******************************************************************************
+ * NAME   : Anthony Ramirez
+ * CLASS  : CS1C
+ * SECTION: T/TH 6:00-8:50
+ * DATE   : 9/4/14
+ * LAB #3 : Shapes and Inheritance
+ *******************************************************************************/
+
+#include "Header.h"
+
+/*******************************************************************************
+ * CircleOperations
+ * -----------------------------------------------------------------------------
+ * This function takes the user into a menu specific to perform operations with
+ * a circle
+ * -----------------------------------------------------------------------------
+ * POST-CODNDITIONS
+ *
+ * CylinderType Class must be previously defined
+ * CircleMenu() must be previously defined
+ *
+ * cyl: Used to for output and must be previously defined
+ *
+ * RETURNS none
+ *******************************************************************************/
+void CircleOperations(CylinderType & cyl)//IN & OUT & CALC
+{
+	//D E C L A R A T I O N S
+	int menuChoice;
+
+	menuChoice = int(PromptUserForInput("Please enter a menu option: ", 0, 5,
+			         "***Please enter a NUMBER***",
+			         "***Please eneter a number between 0 and 5");
+	CircleMenu(cyl);
+}

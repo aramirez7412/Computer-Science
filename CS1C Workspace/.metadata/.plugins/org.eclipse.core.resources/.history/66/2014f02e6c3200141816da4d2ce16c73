@@ -1,0 +1,290 @@
+/*******************************************************************************
+ * NAME     : Anthony Ramirez
+ * CLASS    : CS1C
+ * SECTION  : T/TH 6:00-8:50
+ * DATE     : /14
+ * ASSIGN #2: Deck Of Cards
+ *******************************************************************************/
+
+#include "DeckClass.h"
+
+/*******************************************************************************
+ * Deck Class Accessors and Mutators
+ *******************************************************************************/
+
+	Deck::Deck()
+	{
+		//D E C L A R A T I O N S
+
+
+		//I N I T I A L I Z A T I O N
+
+
+
+	}
+
+	Card::Card()
+	{
+		suit = " ";
+		rank = 0;
+	}
+
+	void Deck::PrintDeck() const
+	{
+		for(int index = 0; index < SIZE; index++)
+		{
+			deck[index].PrintCard();
+		}
+	}
+	void Deck::PrintShuffledDeck()
+	{
+		for(int index = 0; index < SIZE; index++)
+		{
+			perfectShuffle[index].PrintCard();
+		}
+	}
+	void Deck::PrintFinalDeck()
+	{
+		for(int index = 0; index < SIZE; index++)
+		{
+			finalDeck[index].PrintCard();
+		}
+	}
+	void Deck::	InitializeDeck()
+	{
+		//D E C L A R A T I O N
+		int    index; //CALC - used in for loop
+		string suit;
+		int    innerIndex;
+		int    count;
+
+		count = 0;
+
+		for(index = 0; index <5; index++)
+		{
+			switch(index)
+			{
+				case 1:
+				for(innerIndex = 1; innerIndex <= 13; innerIndex++)
+				{
+					suit = "Clubs";
+					deck[count].SetAll(suit, innerIndex);
+
+					count++;
+
+
+				}
+				break;
+				case 2:
+					for(innerIndex = 1; innerIndex <= 13; innerIndex++)
+					{
+						suit = "Spades";
+						deck[count].SetAll(suit, innerIndex);
+						count++;
+					}
+					break;
+				case 3:
+					for(innerIndex = 1; innerIndex <= 13; innerIndex++)
+					{
+						suit = "Hearts";
+
+						deck[count].SetAll(suit, innerIndex);
+						count++;
+					}
+					break;
+				case 4:
+
+					for(innerIndex = 1; innerIndex <= 13; innerIndex++)
+					{
+
+						suit = "Diamonds";
+						deck[count].SetAll(suit, innerIndex);
+						count++;
+					}
+					break;
+				default:
+				break;
+			}
+		}
+
+		InitializeAll();
+
+	}
+	void Deck::InitializeAll()
+	{
+		int index;
+		for(index = 0; index < SIZE; index++)
+		{
+			perfectShuffle[index] =  deck[index];
+		}
+
+		for(index = 0; index < SIZE; index++)
+		{
+			finalDeck[index]      = deck[index];
+		}
+	}
+
+	void Deck::PerfectShuffle()
+	{
+		//D E C L A R A T I O N S
+		int half;
+		int start;
+		int index;
+		int forIndex;
+		Card tempArray[SIZE];
+
+		//I N I T I A L I Z A T I O N S
+		half  = SIZE / 2;
+		start = 0;
+		index = 0;
+
+		for(forIndex = 0; forIndex < SIZE; forIndex++)
+		{
+			tempArray[forIndex] = perfectShuffle[forIndex];
+
+		}
+
+		while(index < SIZE)
+		{
+			perfectShuffle[index] = tempArray[start];
+			index++;
+			perfectShuffle[index] = tempArray[half];
+			half++;
+			start++;
+			index++;
+		}
+	}
+
+	void Deck::ShuffleFinalDeckOnce()
+	{
+		int index;
+		int half;
+		int start;
+		int forIndex;
+		Card tempArray[SIZE];
+
+		index = 0;
+		start = 0;
+		half  = SIZE / 2;
+
+		for(forIndex = 0; forIndex < SIZE; forIndex++)
+		{
+			tempArray[forIndex] = finalDeck[forIndex];
+		}
+
+		while(index < SIZE)
+		{
+			finalDeck[index] = tempArray[start];
+			index++;
+			finalDeck[index] = tempArray[half];
+			index++;
+			start++;
+			half++;
+		}
+	}
+
+	bool Deck::CheckFinalDeck()
+	{
+		int  index;
+		bool traverse;
+
+		index    = 0;
+		traverse = true;
+
+		while(traverse && index < SIZE)
+		{
+			if((finalDeck[index].GetSuit() != deck[index].GetSuit()) &&
+			   (finalDeck[index].GetRank() != deck[index].GetRank()))
+			{
+				traverse = false;
+			}
+			else
+			{
+				cout << "\nTrue: " << index << endl;
+				index++;
+			}
+		}
+
+		return traverse;
+
+	}
+	int Deck::ShuffleFinalUntilPerfect()
+	{
+		int count;
+
+		count = 1;
+
+		ShuffleFinalDeckOnce();
+
+		while(!(CheckFinalDeck()))
+		{
+			ShuffleFinalDeckOnce();
+			count++;
+		}
+
+		return count;
+	}
+	Card::Card(string newSuit, int rank)
+	{
+		SetAll(newSuit, rank);
+	}
+
+	void Card::SetSuit(string newSuit) //IN - used to set the new suit
+	{
+		//Assigns  newSuit to suit
+		suit = newSuit;
+	}
+	void Card::SetRank(int newRank)
+	{
+		//Assigns newRank into rank
+		rank = newRank;
+	}
+	void Card::SetAll(string newSuit, int newRank)
+	{
+		SetSuit(newSuit);
+		SetRank(newRank);
+	}
+
+	string Card::GetSuit()
+	{
+		return suit;
+	}
+	int Card::GetRank()
+	{
+		return rank;
+	}
+	void Card::PrintCard()
+	{
+		if(rank == 1)
+		{
+			cout << "Ace of " << GetSuit() << endl;
+		}
+		else if(rank == 11)
+		{
+			cout << "Jack of " << GetSuit() << endl;
+		}
+		else if(rank == 12)
+		{
+			cout << "Queen of " << GetSuit() << endl;
+		}
+		else if(rank == 13)
+		{
+			cout << "King of " << GetSuit() << endl;
+		}
+		else
+		{
+			cout << GetRank() << " of " << GetSuit() <<endl;
+		}
+	}
+	Deck::~Deck()
+	{
+
+	}
+	Card::~Card()
+	{
+	}
+
+
+
+
+

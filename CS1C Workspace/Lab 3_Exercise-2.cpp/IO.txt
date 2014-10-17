@@ -1,0 +1,11 @@
+**************************************************
+* Programmed by : Anthony Ramirez
+* Student ID    : 369397
+* CS1C          : 6:00-8:50 PM
+* LAB # 2       : C-string concatenation
+**************************************************
+
+Destination C-String: Hey 
+Source C-String     : World
+
+Concatenated string: Hey World

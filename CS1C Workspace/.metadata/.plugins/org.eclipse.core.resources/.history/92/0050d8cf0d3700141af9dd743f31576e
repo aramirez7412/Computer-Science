@@ -1,0 +1,247 @@
+/*******************************************************************************
+ * NAME     : Anthony Ramirez
+ * CLASS    : CS1C
+ * SECTION  : T/TH 6:00-8:50
+ * DATE     : 9/9/14
+ * ASSIGN #3: Student Class
+ *******************************************************************************/
+#include "StudentClass.h"
+/*******************************
+ * Student Class Implementation*
+ *******************************/
+
+/*******************************************************************************
+ * Student (Default Constructor)
+ * -----------------------------------------------------------------------------
+ * This constructor will initialize all of the private members of the Student
+ * class
+ *******************************************************************************/
+Student::Student(): name		 (" "),
+					classStanding(" "),
+					phoneNumber  (" "),
+					id           (0),
+					age		     (0),
+					gpa		     (0),
+					gender	     (' ')
+{
+	//Empty body
+}
+
+/***************************************************************************
+ * SetName
+ * -------------------------------------------------------------------------
+ * This method will set -name by assigning the value of newName
+ *
+ * Returns: All private members initialized to respective parameter
+ ***************************************************************************/
+void Student::SetName	(string newName)
+{
+	name = newName;
+}
+
+/***************************************************************************
+ * SetStanding
+ * -------------------------------------------------------------------------
+ * This method will set -classStanding by assigning the value of newStanding
+ *
+ * Returns: classStanding = newStanding;
+ ***************************************************************************/
+void Student::SetStanding(string newStanding)
+{
+	classStanding = newStanding;
+}
+
+/***************************************************************************
+ * SetNumber
+ * -------------------------------------------------------------------------
+ * This method will set -phoneNumber by assigning the value of newNumber
+ *
+ * Returns: -phoneNumber = newNumber;
+ ***************************************************************************/
+void Student::SetNumber(string newNumber)
+{
+	phoneNumber = newNumber;
+}
+
+/***************************************************************************
+ * SetAge
+ * -------------------------------------------------------------------------
+ * This method will set -age by assigning the value of newAge
+ *
+ * Returns: age = newAge;
+ ***************************************************************************/
+void Student::SetAge(unsigned short newAge)
+{
+	 age = newAge;
+}
+
+/***************************************************************************
+ * SetGpa
+ * -------------------------------------------------------------------------
+ * This method will set -gpa by assigning the value of newGpa
+ *
+ * Returns: -gpa = newGpa;
+ ***************************************************************************/
+void Student::SetGpa(double newGpa)
+{
+	gpa = newGpa;
+}
+
+/***************************************************************************
+ * SetGender
+ * -------------------------------------------------------------------------
+ * This method will set -gender by assigning the value of newGender
+ *
+ * Returns: -gender = newGender;
+ ***************************************************************************/
+void Student::SetGender(char newGender)
+{
+	gender = newGender;
+}
+
+/***************************************************************************
+ * SetId
+ * -------------------------------------------------------------------------
+ * This method will set -id by assigning the value of newId
+ *
+ * Returns: -id = newId;
+ ***************************************************************************/
+void Student::SetId      (long newId)
+{
+	id = newId;
+}
+
+/***************************************************************************
+ * SetAll
+ * -------------------------------------------------------------------------
+ * This method will set all private members
+ *
+ * Returns: All members will be assigned a value
+ ***************************************************************************/
+void Student::SetAll(string 		   newName,
+					 string 		   newStanding,
+					 string 		   newNumber,
+					 long   		   newId,
+					 unsigned short    newAge,
+					 double 		   newGpa,
+					 char 		       newGender)
+{
+	//Calls all set methods to initialize all
+	SetName    (newName);
+	SetStanding(newStanding);
+	SetNumber  (newNumber);
+	SetId      (newId);
+	SetAge     (newAge);
+	SetGpa     (newGpa);
+	SetGender  (newGender);
+}
+
+/***************************************************************************
+ * GetName (const)
+ * -------------------------------------------------------------------------
+ * This method will return the name of the object
+ *
+ * Returns: string (-name member is returned)
+ ***************************************************************************/
+string 	Student::GetName() const
+{
+	return name;
+}
+
+/***************************************************************************
+ * GetStanding
+ * -------------------------------------------------------------------------
+ * This method will return the class standing of the object
+ *
+ * Returns: string (-classStanding)
+ ***************************************************************************/
+string 	Student::GetStanding() const
+{
+	return classStanding;
+}
+
+/***************************************************************************
+ * GetNumber
+ * -------------------------------------------------------------------------
+ * This method will return the phone number of the object
+ *
+ * Returns: string(-phoneNumber)
+ ***************************************************************************/
+string 	Student::GetNumber() const
+{
+	return phoneNumber;
+}
+
+/***************************************************************************
+ * GetId
+ * -------------------------------------------------------------------------
+ * This method will return the id of the object
+ *
+ * Returns: long(-id)
+ ***************************************************************************/
+long  Student::GetId() const
+{
+	return id;
+}
+
+/***************************************************************************
+ * GetNewAge
+ * -------------------------------------------------------------------------
+ * This method will return the age of the object
+ *
+ * Returns: string(-age)
+ ***************************************************************************/
+unsigned short Student::GetAge() const
+{
+	return age;
+}
+
+/***************************************************************************
+ * GetNumber
+ * -------------------------------------------------------------------------
+ * This method will return the phone number of the object
+ *
+ * Returns: string(-phoneNumber)
+ ***************************************************************************/
+double Student::GetGpa() const
+{
+	return gpa;
+}
+
+/***************************************************************************
+ * GetGender
+ * -------------------------------------------------------------------------
+ * This method will return the gender of the object
+ *
+ * Returns: string(-gender)
+ ***************************************************************************/
+char Student::GetGender() const
+{
+	return gender;
+}
+
+/***************************************************************************
+ * PrintAll
+ * -------------------------------------------------------------------------
+ * This method will print the attributes of the object
+ *
+ * Returns: none
+ ***************************************************************************/
+void Student::PrintAll() const
+{
+	const int NAME_WIDTH  = 20;
+	const int ID_WIDTH    = 9;
+	const int NUM_WIDTH   = 17;
+	const int AGE_WIDTH   = 5;
+	const int GEN_WIDTH   = 6;
+	const int STAND_WIDTH = 10;
+
+	cout << left;
+	cout << setw(NAME_WIDTH)  << GetName()
+		 << setw(ID_WIDTH)    << GetId()
+		 << setw(NUM_WIDTH)   << GetNumber()
+		 << setw(AGE_WIDTH)   << GetAge()
+		 << setw(GEN_WIDTH)   << GetGender()
+		 << setw(STAND_WIDTH) << GetStanding()
+		 << GetGpa();
+}

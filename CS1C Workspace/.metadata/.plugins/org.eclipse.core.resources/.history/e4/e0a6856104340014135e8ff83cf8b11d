@@ -1,0 +1,10 @@
+#include "Header.h"
+void ModifyRadius(CylinderType & cyl)
+{
+	double newRadius;
+	PromptUserForIntInput("Please enter initial radius to continue operations: ",
+							  0, 20000, "***Please enter a NUMBER***",
+							  "***Enter a number between 0 and 20,000");
+
+	cyl.SetRadius(newRadius);
+}

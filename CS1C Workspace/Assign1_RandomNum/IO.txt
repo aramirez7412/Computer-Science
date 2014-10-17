@@ -1,0 +1,119 @@
+/*******************************************************************************
+ * NAME   : Anthony Ramirez
+ * DATE   : 8/26/2014
+ * CLASS  : CS1C
+ * SECTION: T/TH 6-850PM
+ *******************************************************************************/
+*****************************************************************
+* Hello! Welcome to the random number generator program. In this*
+* program you will be able to generate a random number, sum     *
+* sum the digits, triple, and reverse the number. When you would*
+* like to exit please enter "0"                                 *
+*****************************************************************
+Press enter to generate a random number!
+
+1 - Output number
+2 - Triple the number
+3 - Sum the digits
+4 - Reverse Digits
+5 - Generate New Number
+0 - Exit
+
+
+Please choose a menu option: 1
+
+The random number generated: 587
+
+1 - Output number
+2 - Triple the number
+3 - Sum the digits
+4 - Reverse Digits
+5 - Generate New Number
+0 - Exit
+
+
+Please choose a menu option: 2
+
+Triple the random number: 1761
+
+1 - Output number
+2 - Triple the number
+3 - Sum the digits
+4 - Reverse Digits
+5 - Generate New Number
+0 - Exit
+
+
+Please choose a menu option: 3
+
+The sum of the digits of the random number: 20
+
+1 - Output number
+2 - Triple the number
+3 - Sum the digits
+4 - Reverse Digits
+5 - Generate New Number
+0 - Exit
+
+
+Please choose a menu option: 4
+
+The random number reversed: 784
+
+1 - Output number
+2 - Triple the number
+3 - Sum the digits
+4 - Reverse Digits
+5 - Generate New Number
+0 - Exit
+
+
+Please choose a menu option: 0
+
+Hello! The next step is to generate an array of 10 randomNumbers.
+The numbers are conveniently already generated. They will be sent
+to the console by default. You must now specify an output file
+to read from.
+
+What output file would you like to use?: Out.txt
+Element #1: 444
+Element #2: 969
+Element #3: 582
+Element #4: 761
+Element #5: 891
+Element #6: 618
+Element #7: 114
+Element #8: 831
+Element #9: 943
+Element #10: 406
+
+Here is the array sorted using an insertion sort
+Element #1: 114
+Element #2: 406
+Element #3: 444
+Element #4: 582
+Element #5: 618
+Element #6: 761
+Element #7: 831
+Element #8: 891
+Element #9: 943
+Element #10: 969
+
+Thanks! The array was output to both the console and the specified 
+output file
+Next, another array will read in the random numbers that were sent 
+to the output file. 
+Please specify the output file that you used: 
+Please enter the file name you would like to use: Out.txt
+
+Here is the array that was read from the output file!
+Element #1: 114
+Element #2: 406
+Element #3: 444
+Element #4: 582
+Element #5: 618
+Element #6: 761
+Element #7: 831
+Element #8: 891
+Element #9: 943
+Element #10: 969

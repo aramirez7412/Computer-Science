@@ -1,0 +1,26 @@
+#include "Header.h"
+#include "StudentClass.h"
+#include "CS1CStudent.h"
+#include "MathStudent.h"
+
+
+void CheckIDFunction(const Student& CS1CStu, const Student& MathStu)
+{
+	//D E C L A R A T I O N S
+	const int WIDTH = 28;
+	cout << left;
+	cout << setfill('*');
+
+	if(checkId(CS1CStu, MathStu))
+	{
+		cout << endl << setw(15) << endl;
+		cout << "* The Id's are the same!*";
+		cout << endl << setw(15) << endl;
+	}
+	else
+	{
+		cout << endl << setw(15) << endl;
+		cout << "* The Id's are DIFFERENT!*";
+		cout << endl << setw(15) << endl;
+	}
+}

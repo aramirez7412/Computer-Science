@@ -1,0 +1,50 @@
+/*******************************************************************************
+ * NAME   : Anthony Ramirez
+ * CLASS  : CS1C
+ * SECTION: T/TH 6:00-8:50
+ * DATE   : 9/4/14
+ * LAB #3 : Shapes and Inheritance
+ *******************************************************************************/
+#include "Header.h"
+
+int PromptUserForIntInput(string prompt,
+						  int min,
+						  int max,
+						  string errorMessage,
+						  string errorMessage2)
+{
+	int userInput;
+	ostringstream out;
+	string errorMessage3;
+	int width;
+
+	do
+	{
+		cout << prompt;
+
+		if(!(cin >> userInput))
+		{
+			cin.clear();
+			cout << errorMessage;
+		}
+		if(userInput < min && userInput > max)
+		{
+			out << "***" << userInput << " is not valid input***";
+			errorMessage3 = out.str();
+
+			out.str("");
+
+			if(errorMessage3.length() > errorMessage2.length())
+			{
+				width = errorMessage3.length();
+			}
+			else
+			{
+				width = errorMessage2.lentgh();
+			}
+
+			cout << setw(width) << errorMessage3 << "****";
+			cout << setw(width) << errorMessage2 << "****";
+		}
+	}
+}

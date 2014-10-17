@@ -1,0 +1,41 @@
+/*******************************************************************************
+ * NAME     : Anthony Ramirez
+ * CLASS    : CS1C
+ * SECTION  : T/TH 6:00-8:50
+ * DATE     : /14
+ * ASSIGN #2: Deck Of Cards
+ *******************************************************************************/
+#ifndef CARDCLASS_H_
+#define CARDCLASS_H_
+
+#include "DeckClass.h"
+#include <string>
+using namespace std;
+class Card
+{
+	public:
+	//C O N S T R U C T O R & D E S T R U C T O R
+	Card();
+	Card(string newSuit, int rank);
+	~Card();
+
+	//M U T A T O R S
+	void   SetAll(string newSuit, int rank);
+	void   SetSuit(string newSuit);
+	void   SetRank(int newRank);
+	void   PrintCard();
+	string GetSuit();
+	int    GetRank();
+
+	//O P E R A T O R ~ O V E R L O A D
+	bool operator != (Card array[]);
+
+	private:
+	string suit;
+	int    rank;
+
+};
+
+
+
+#endif /* CARDCLASS_H_ */
